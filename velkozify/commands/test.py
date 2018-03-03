@@ -1,9 +1,7 @@
 """Command to test various different data sets.
 
-The data sets of interest might be
-    Champions
+The data sets with tests current are
     Items
-    Runes
 """
 import click
 
@@ -19,6 +17,7 @@ import click
     '-c', '--champion', '--champions', multiple=True,
     metavar='<Champion name>', help="A specific champion to run tests on.")
 def test(champions, all_champions, all_items):
+    """Run tests on various data sets."""
     click.echo("Tests are still being made.")
 
     # Make sure either some champions or all champions is picked.

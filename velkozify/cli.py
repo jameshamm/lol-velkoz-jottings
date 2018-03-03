@@ -1,3 +1,4 @@
+"""The main entrypoint for commands."""
 import click
 
 from .commands import info, test
@@ -8,7 +9,7 @@ from .commands import info, test
 def main(json_output):
     if json_output:
         click.echo("Outputing in json has not been implemented yet.")
-    click.echo("hello, void!")
+    click.echo("Hello, void!")
 
 
 main.add_command(test)
