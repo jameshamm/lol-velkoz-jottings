@@ -2,9 +2,7 @@
 from codecs import open
 from os.path import abspath, dirname, join
 from subprocess import call
-
 from setuptools import Command, find_packages, setup
-
 from velkozify import __version__
 
 
@@ -31,32 +29,31 @@ class RunTests(Command):
 
 
 setup(
-    name = 'lol-velkoz-jottings',
-    version = __version__,
-    description = 'A command line tool to inspect and analyse public lol datasets.',
-    long_description = long_description,
-    url = 'https://github.com/jameshamm/lol-velkoz-jottings',
-    author = 'James Hamm',
-    author_email = '',
-    license = 'MIT LICENSE',
-    classifiers = [
+    name='lol-velkoz-jottings',
+    version=__version__,
+    description='A tool to inspect and analyse public lol datasets.',
+    long_description=long_description,
+    url='https://github.com/jameshamm/lol-velkoz-jottings',
+    author='James Hamm',
+    author_email='',
+    license='MIT LICENSE',
+    classifiers=[
         'Intended Audience :: Developers',
         'License :: Public Domain',
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-    ],
-    keywords = 'cli',
-    packages = find_packages(exclude=['docs', 'tests*']),
-    install_requires = ['Click'],
-    extras_require = {
-        'test': ['coverage', 'pytest', 'pytest-cov'],
+        'Programming Language :: Python :: 3.5'],
+    keywords='cli',
+    packages=find_packages(exclude=['docs', 'tests*']),
+    install_requires=['Click'],
+    extras_require={
+        'test': ['coverage', 'pytest', 'pytest-cov']
     },
-    entry_points = {
+    entry_points={
         'console_scripts': [
-            'velkozify=velkozify.cli:main',
-        ],
+            'velkozify=velkozify.cli:main'
+        ]
     },
-    cmdclass = {'test': RunTests},
+    cmdclass={'test': RunTests},
 )

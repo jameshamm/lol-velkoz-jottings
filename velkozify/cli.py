@@ -1,13 +1,15 @@
 import click
 
+from .commands import info, test
 
-@click.command()
-@click.option('--all-champions', is_flag=True)
-@click.option('--all-items', is_flag=True)
-def main(all_champions, all_items):
-    if all_champions:
-        click.echo("Checks for all champions are not implemented yet.")
 
-    if all_items:
-        click.echo("Checks for all items are not implemented yet.")
+@click.group()
+@click.option('--json-output', is_flag=True)
+def main(json_output):
+    if json_output:
+        click.echo("Outputing in json has not been implemented yet.")
     click.echo("hello, void!")
+
+
+main.add_command(test)
+main.add_command(info)

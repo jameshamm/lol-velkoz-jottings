@@ -1,0 +1,2 @@
+# Install in development mode
+pip install -e .

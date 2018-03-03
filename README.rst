@@ -7,7 +7,7 @@ lol-velkoz-jottings
 Purpose
 -------
 
-This is a CLI tool that aims to provide tools to inspect and analyse the publically available datasets for lol.
+This is a CLI tool that aims to provide tools to inspect and analyse the publicly available datasets for lol.
 
 Usage
 -----
