@@ -57,3 +57,15 @@ FILE_LOCATIONS = {
     "champion": _get_champion_saved_location,
     "all_champions": _get_all_champions_saved_location,
     "all_items": _get_all_items_saved_location}
+
+
+def expected_filename(query_type, query, patch, region):
+    """Return the expected filename for a data set."""
+    get_file_location = FILE_LOCATIONS[query_type]
+
+    if query_type == "champion":
+        # Unlike other query types, the champion name is needed.
+        # It is presumed the champion name has already been normalized.
+        return get_file_location(query, patch, region)
+
+    return get_file_location(patch, region)

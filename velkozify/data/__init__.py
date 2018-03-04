@@ -1,5 +1,7 @@
-from .downloader import ONLINE_LOCATIONS, download, get_latest_patch
-from .storage import FILE_LOCATIONS, load
+import click
+
+from .downloader import expected_url, download, get_latest_patch
+from .storage import expected_filename, load, save
 
 from urllib.error import URLError
 
@@ -45,22 +47,14 @@ class DataManager:
 
         Otherwise raise a DataNotFound Error.
         """
-        get_file_location = FILE_LOCATIONS[query_type]
-
-        if query_type == "champion":
-            # Unlike other query types, the champion name is needed.
-            # It is presumed the champion name has already been normalized.
-            expected_file_location = get_file_location(
-                query, patch=self.patch, region=self.region)
-        else:
-            expected_file_location = get_file_location(
-                patch=self.patch, region=self.region)
+        filename = expected_filename(
+            query_type, query, patch=self.patch, region=self.region)
 
         try:
-            data = load(expected_file_location, data_format="json")
+            data = load(filename, data_format="json")
         except IOError:
             message = "Could not locate {} at {}".format(
-                query_type, expected_file_location)
+                query_type, filename)
             raise DataNotFound(message)
         else:
             return data
@@ -70,13 +64,8 @@ class DataManager:
 
         Otherwise raise a DataNotFound Error.
         """
-        url = ONLINE_LOCATIONS[query_type]
-
-        if query_type == "champion":
-            # It is presumed the champion name has already been normalized.
-            url = url.format(self.patch, self.region, query)
-        else:
-            url = url.format(self.patch, self.region)
+        url = expected_url(
+            query_type, query, patch=self.patch, region=self.region)
 
         try:
             data = download(url, data_format="json")
@@ -105,6 +94,7 @@ class DataManager:
         TODO: Add caching to this function. If the data is downloaded from
         online, the data should be saved.
         """
+        # This is messy, but has nicer documentation than **kwargs.
         number_of_requested_data_sets = 0
         if champion_name is not None:
             query_type, query = "champion", champion_name
@@ -138,6 +128,18 @@ class DataManager:
             message = "Could not find {} locally or online.".format(query)
             raise DataNotFound(message)
         else:
+            # Save the data so that it doesn't need to be downloaded again.
+            filename = expected_filename(
+                query_type, query, patch=self.patch, region=self.region)
+
+            try:
+                save(filename, data, data_format="json")
+            except IOError:
+                pass
+            else:
+                click.echo(
+                    "Saved the data set for {} to {}".format(query, filename))
+
             return data
 
     def all_champion_names(self):

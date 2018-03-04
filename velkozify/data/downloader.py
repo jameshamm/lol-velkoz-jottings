@@ -47,6 +47,8 @@ def get_latest_patch():
     return version_data[0]
 
 
+# Fill this in with the patch, then the region
+# For example: http://ddragon.leagueoflegends.com/cdn/8.5.1/data/en_US/
 # NOTE: These use an insecure http connection.
 WEBSITE_PREFIX = "http://ddragon.leagueoflegends.com/cdn/{}/data/{}/"
 
@@ -55,3 +57,14 @@ ONLINE_LOCATIONS = {
     "all_champions": WEBSITE_PREFIX + "champion.json",
     "all_items": WEBSITE_PREFIX + "item.json"
 }
+
+
+def expected_url(query_type, query, patch, region):
+    """Return the expected url the data set will be available from."""
+    url = ONLINE_LOCATIONS[query_type]
+
+    if query_type == "champion":
+        # It is presumed the champion name has already been normalized.
+        return url.format(patch, region, query)
+
+    return url.format(patch, region)
