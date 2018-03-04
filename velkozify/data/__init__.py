@@ -1,3 +1,10 @@
+"""This module is for making access to data sets as easy as possible.
+
+Example usage to print out all the champion names in the current patch
+>>> d = DataManager()
+>>> champion_names = d.all_champion_names()
+>>> print(champion_names.values())
+"""
 import click
 
 from .downloader import expected_url, download, get_latest_patch
@@ -28,6 +35,7 @@ def compress_name(champion_name):
 
 
 class DataNotFound(Exception):
+    """Thrown if data that was requested could not be found."""
     pass
 
 

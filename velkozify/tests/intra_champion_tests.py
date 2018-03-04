@@ -1,3 +1,6 @@
+"""intra_champion_tests.py contains tests that check the internal consistency
+of a champion's data.
+"""
 from ..data import DataManager
 
 
