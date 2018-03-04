@@ -55,5 +55,5 @@ setup(
             'velkozify=velkozify.cli:main'
         ]
     },
-    cmdclass={'test': RunTests},
+    cmdclass={'test': RunTests}
 )
