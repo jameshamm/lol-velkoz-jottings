@@ -15,21 +15,25 @@ class DataNotFound(Exception):
     pass
 
 
-def normalize(champion_name):
-    """To access a champion data set online,
-    the name must be normalize to a specific format.
+def compress_name(champion_name):
+    """To ensure champion names can be searched for and compared,
+    the names need to be reduced.
 
-    Each word in the name must be in titlecase
-        jhin -> Jhin
-        GALIO -> Galio
-    Spaces are removed
-        Aurelion Sol -> AurelionSol
-        xin zhao -> XinZhao
-    Apostrophes are removed (but do not count as word separators)
-        Cho'Gath -> Chogath (Notice the lowercase g)
-        kha'ZIX -> Khazix
+    The process is to remove any characters not in the alphabet
+    (apostrophe, space, etc) and then convert everything to lowercase.
+
+    Note that reversing this is non-trivial, there are inconsistencies
+    in the naming scheme used.
+
+    Examples:
+        Jhin -> jhin
+        GALIO -> galio
+        Aurelion Sol -> aurelionsol
+        Dr. Mundo -> drmundo
+        kha'zix -> khazix
     """
-    return champion_name.replace("'", "").title().replace(" ", "")
+    compressed_name = "".join(c for c in champion_name if c.isalpha())
+    return compressed_name.lower()
 
 
 def download(url, data_format=None):
@@ -182,13 +186,14 @@ class DataManager:
         will be raised.
 
         ASSUMPTION: The file format for every data set is presumed to be json.
+        ASSUMPTION: The champion name has been normalized to an expected name.
+        This is not a great assumption as get_data is public.
 
         TODO: This function is messy to read, and uses strings everywhere.
         It should be reworked if possible when more data sets are added.
         """
         number_of_requested_data_sets = 0
         if champion_name is not None:
-            champion_name = normalize(champion_name)
             query_type, query = "champion", champion_name
             number_of_requested_data_sets += 1
 
@@ -221,3 +226,13 @@ class DataManager:
             raise DataNotFound(message)
         else:
             return "online", data
+
+    def all_champion_names(self):
+        """Return a dict with the known champion names.
+
+        The format each entry follows is <compressed name>: <name>."""
+        _, all_champions_data = self.get_data(all_champions=True)
+        champion_names = all_champions_data["data"].keys()
+        champion_names_dict = {
+            compress_name(name): name for name in champion_names}
+        return champion_names_dict
