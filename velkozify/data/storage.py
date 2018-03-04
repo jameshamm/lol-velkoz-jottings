@@ -2,7 +2,7 @@ import json
 import os
 
 
-LOCAL_STORAGE_FOLDER = ".data_sets"
+LOCAL_STORAGE_FOLDER = "data_sets"
 
 
 def load(filename, data_format=None):
@@ -11,7 +11,7 @@ def load(filename, data_format=None):
         if data_format is not None:
             # Coerce the data
             if data_format == "json":
-                return json.loads(file)
+                return json.load(file)
 
             message = "Data format ({}) is not known".format(data_format)
             raise ValueError(message)
@@ -24,7 +24,22 @@ def save(filename, contents, data_format=None):
 
     If a format is specified, save with that format.
     """
-    raise NotImplementedError("Saving is not ready yet.")
+    # If the folder structure doesn't exist, make it.
+    directory_name = os.path.dirname(filename)
+    if not os.path.exists(directory_name):
+        os.makedirs(directory_name)
+
+    # Save the file with the proposed data format.
+    with open(filename, 'w') as file:
+        if data_format is not None:
+            if data_format == "json":
+                json.dump(contents, file)
+                return
+
+            message = "Data format ({}) is not known".format(data_format)
+            raise ValueError(message)
+
+        file.write(contents)
 
 
 def _get_champion_saved_location(champion_name, patch, region):

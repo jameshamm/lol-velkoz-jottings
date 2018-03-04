@@ -60,3 +60,6 @@ def test(champions, all_champions, all_items):
             # Finally run tests
             for champion in sorted(champions):
                 run_intra_champion_tests(champion)
+
+    if all_items:
+        click.echo("The data set with all items is not supported yet.")

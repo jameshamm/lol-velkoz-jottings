@@ -134,7 +134,7 @@ class DataManager:
 
             try:
                 save(filename, data, data_format="json")
-            except IOError:
+            except NotImplementedError:
                 pass
             else:
                 click.echo(
