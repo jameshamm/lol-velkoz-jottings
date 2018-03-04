@@ -13,27 +13,6 @@ from .storage import expected_filename, load, save
 from urllib.error import URLError
 
 
-def compress_name(champion_name):
-    """To ensure champion names can be searched for and compared,
-    the names need to be reduced.
-
-    The process is to remove any characters not in the alphabet
-    (apostrophe, space, etc) and then convert everything to lowercase.
-
-    Note that reversing this is non-trivial, there are inconsistencies
-    in the naming scheme used.
-
-    Examples:
-        Jhin -> jhin
-        GALIO -> galio
-        Aurelion Sol -> aurelionsol
-        Dr. Mundo -> drmundo
-        kha'zix -> khazix
-    """
-    compressed_name = "".join(c for c in champion_name if c.isalpha())
-    return compressed_name.lower()
-
-
 class DataNotFound(Exception):
     """Thrown if data that was requested could not be found."""
     pass
@@ -46,9 +25,14 @@ class DataManager:
 
     If the data is not available, an attempt will be made to download it.
     """
-    def __init__(self, patch=None):
+    def __init__(self, patch=None, region=None):
+        """Example:
+            DataManager()
+            DataManager(patch="8.5.1")
+            DataManager(patch="6.24.1", region="en_GB")
+        """
         self.patch = get_latest_patch() if patch is None else patch
-        self.region = "en_US"
+        self.region = "en_US" if region is None else region
 
     def _get_saved_data(self, query_type, query):
         """Return data if it is saved locally.
@@ -85,7 +69,7 @@ class DataManager:
             return data
 
     def get_data(self, champion_name=None,
-                 all_champions=None, all_items=None):
+                 all_champions=None, all_items=None, force_download=False):
         """Get the data on a particular champion, all champions, or
         all items.
 
@@ -121,13 +105,14 @@ class DataManager:
             message = "More than one data set was requested at once."
             raise ValueError(message)
 
-        # Look locally for the data
-        try:
-            data = self._get_saved_data(query_type, query)
-        except DataNotFound:
-            pass
-        else:
-            return data
+        if not force_download:
+            # Look locally for the data
+            try:
+                data = self._get_saved_data(query_type, query)
+            except DataNotFound:
+                pass
+            else:
+                return data
 
         # Find the data online
         try:
@@ -142,7 +127,7 @@ class DataManager:
 
             try:
                 save(filename, data, data_format="json")
-            except NotImplementedError:
+            except IOError:
                 pass
             else:
                 click.echo(
@@ -159,3 +144,24 @@ class DataManager:
         champion_names_dict = {
             compress_name(name): name for name in champion_names}
         return champion_names_dict
+
+
+def compress_name(champion_name):
+    """To ensure champion names can be searched for and compared,
+    the names need to be reduced.
+
+    The process is to remove any characters not in the alphabet
+    (apostrophe, space, etc) and then convert everything to lowercase.
+
+    Note that reversing this is non-trivial, there are inconsistencies
+    in the naming scheme used.
+
+    Examples:
+        Jhin -> jhin
+        GALIO -> galio
+        Aurelion Sol -> aurelionsol
+        Dr. Mundo -> drmundo
+        kha'zix -> khazix
+    """
+    compressed_name = "".join(c for c in champion_name if c.isalpha())
+    return compressed_name.lower()

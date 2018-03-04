@@ -3,6 +3,9 @@ import os
 
 
 LOCAL_STORAGE_FOLDER = "data_sets"
+FILE_LOCATION_ENDINGS = {
+    "all_champions": "champion.json",
+    "all_items": "item.json"}
 
 
 def load(filename, data_format=None):
@@ -42,45 +45,16 @@ def save(filename, contents, data_format=None):
         file.write(contents)
 
 
-def _get_champion_saved_location(champion_name, patch, region):
-    """Return the location a champion data set is expected to be.
-
-    This function defines the expected (sub)folder format and
-    needs to be updated if the format changes."""
-    return os.path.join(
-        LOCAL_STORAGE_FOLDER, patch, region,
-        "champions", str(champion_name) + ".json")
-
-
-def _get_all_champions_saved_location(patch, region):
-    """Return the location the data set with all champions is expected to be.
-
-    This function defines the expected (sub)folder format and
-    needs to be updated if the format changes."""
-    return os.path.join(LOCAL_STORAGE_FOLDER, patch, region, "champion.json")
-
-
-def _get_all_items_saved_location(patch, region):
-    """Return the location the data set with all champions is expected to be.
-
-    This function defines the expected (sub)folder format and
-    needs to be updated if the format changes."""
-    return os.path.join(LOCAL_STORAGE_FOLDER, patch, region, "item.json")
-
-
-FILE_LOCATIONS = {
-    "champion": _get_champion_saved_location,
-    "all_champions": _get_all_champions_saved_location,
-    "all_items": _get_all_items_saved_location}
-
-
 def expected_filename(query_type, query, patch, region):
     """Return the expected filename for a data set."""
-    get_file_location = FILE_LOCATIONS[query_type]
+
+    file_location_prefix = os.path.join(LOCAL_STORAGE_FOLDER, patch, region)
 
     if query_type == "champion":
         # Unlike other query types, the champion name is needed.
         # It is presumed the champion name has already been normalized.
-        return get_file_location(query, patch, region)
+        return os.path.join(
+            file_location_prefix, "champions", str(query) + ".json")
 
-    return get_file_location(patch, region)
+    return os.path.join(
+        file_location_prefix, FILE_LOCATION_ENDINGS[query_type])

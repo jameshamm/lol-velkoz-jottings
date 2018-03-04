@@ -42,7 +42,6 @@ def get_version_data():
 def get_latest_patch():
     """Return the most recent patch."""
     version_data = get_version_data()
-
     # latest patch is the first in the version data list
     return version_data[0]
 
