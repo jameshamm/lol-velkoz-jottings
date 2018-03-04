@@ -1,8 +1,10 @@
 import json
 import os
 
-
-LOCAL_STORAGE_FOLDER = "data_sets"
+# This is needed so that no matter where the script is run from
+# it will still point to the correct data set folder.
+LOCAL_STORAGE_ABSPATH = os.path.abspath(os.path.dirname(__file__))
+LOCAL_STORAGE_FOLDER = os.path.join(LOCAL_STORAGE_ABSPATH, "data_sets")
 FILE_LOCATION_ENDINGS = {
     "all_champions": "champion.json",
     "all_items": "item.json"}
