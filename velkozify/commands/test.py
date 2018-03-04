@@ -5,6 +5,8 @@ The data sets with tests current are
 """
 import click
 
+from ..tests import run_intra_champion_tests
+
 
 @click.command()
 @click.option(
@@ -32,3 +34,6 @@ def test(champions, all_champions, all_items):
 
     if all_champions:
         click.echo("Running tests for all champions is not supported yet.")
+
+    for champion in champions:
+        run_intra_champion_tests(champion)
