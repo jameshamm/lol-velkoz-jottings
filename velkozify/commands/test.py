@@ -40,8 +40,6 @@ def test(champions, all_champions, all_items):
             champions = known_champions.values()
 
         if champions:
-            click.echo("The champs named are: " + str(champions))
-
             # Validate the champion names passed in.
             unknown_champions = [
                 champion for champion in champions
