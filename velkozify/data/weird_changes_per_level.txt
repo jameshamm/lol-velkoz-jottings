@@ -1,0 +1,69 @@
+# (In|De)creasing <attribute> per level
+
+attr, increase = "cost", True
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        attr_list = spell[attr]
+        if increase:
+            if any(a > b for a, b in zip(attr_list[1:], attr_list)):
+                print(champ, spell["id"], "Increasing {} with level".format(attr), attr_list)
+        else:  # decrease
+            if any(a < b for a, b in zip(attr_list[1:], attr_list)):
+                print(champ, spell["id"], "Decreasing {} with level".format(attr), attr_list)
+
+# Decreasing cost per level
+# attr, increase = "cost", False
+Akali AkaliSmokeBomb Decreasing cost with level [60, 55, 50, 45, 40]
+Akali AkaliShadowSwipe Decreasing cost with level [60, 55, 50, 45, 40]
+Darius DariusExecute Decreasing cost with level [100, 100, 0]
+Draven DravenFury Decreasing cost with level [40, 35, 30, 25, 20]
+Gangplank GangplankQWrapper Decreasing cost with level [60, 55, 50, 45, 40]
+Kennen KennenShurikenHurlMissile1 Decreasing cost with level [60, 55, 50, 45, 40]
+Kennen KennenLightningRush Decreasing cost with level [100, 95, 90, 85, 80]
+Lucian LucianE Decreasing cost with level [40, 30, 20, 10, 0]
+Quinn QuinnR Decreasing cost with level [100, 50, 0]
+Shen ShenQ Decreasing cost with level [140, 130, 120, 110, 100]
+TwistedFate Destiny Decreasing cost with level [150, 125, 100]
+Xayah XayahW Decreasing cost with level [60, 55, 50, 45, 40]
+Zed ZedQ Decreasing cost with level [75, 70, 65, 60, 55]
+Zed ZedW Decreasing cost with level [40, 35, 30, 25, 20]
+
+# Decreasing range per level
+# attr, increase = "range", False
+Zoe ZoeW Decreasing range with level [3000, 4500, 6000, 3000, 3000]
+
+
+# Both increasing and decreasing effects
+Zoe ZoeW e2 3000/4500/6000/0/0
+Jayce JayceToTheSkies e4 20/40/60/80/0/0
+Kled KledR e6 100/150/0
+
+
+# Negative effects
+for champ, data in champs_data.items():
+    for index in range(1, 11):
+        for spell in data["spells"]:
+            attr_list = spell["effect"][index]
+            if any(a < 0 for a in attr_list):
+                print(champ, spell["id"], "e" + str(index), spell["effectBurn"][index])
+
+# Outputs
+Annie InfernalGuardian e4 -0.1
+Camille CamilleR e4 -0.9
+Draven DravenFury e6 -0.05/-0.056/-0.062/-0.069/-0.075
+Evelynn EvelynnQ e10 -0.25
+Gnar GnarE e4 -0.8
+Illaoi IllaoiQ e8 -0.3/-0.35/-0.4/-0.45/-0.5
+Quinn QuinnQ e2 -1000
+Sion SionQ e10 -0.8
+Sona SonaR e4 -0.1/-0.25/-0.4
+Sona SonaR e5 -0.1/-0.25/-0.4
+Swain SwainE e5 -0.5
+Swain SwainQ e10 -0.4
+Taliyah TaliyahE e2 -0.2
+Trundle TrundleTrollSmash e4 -10/-12.5/-15/-17.5/-20
+Xerath XerathArcanopulseChargeUp e6 -0.2
+Xerath XerathArcaneBarrage2 e10 -0.25
+Zac ZacQ e4 -0.6
+Ziggs ZiggsE e6 -0.2/-0.25/-0.3/-0.35/-0.4
+Zoe ZoeR e1 -0.3/-0.4/-0.5

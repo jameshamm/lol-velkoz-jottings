@@ -36,7 +36,8 @@ def test(champions, all_champions, all_items):
         known_champions = manager.all_champion_names()
 
         if all_champions:
-            click.echo("Running tests for all champions is not supported yet.")
+            click.echo("Running tests on all champions.")
+            click.echo("=" * 12)
             champions = known_champions.values()
 
         if champions:

@@ -1,0 +1,133 @@
+# Get all champion data sets
+champs_data = dict()
+for champ in d.all_champion_names().values():
+    champs_data[champ] = d.get_data(champ)["data"][champ]
+
+
+# Find unused vars
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        count = 0
+        for var in spell["vars"]:
+            if " " + var["key"] + " " not in spell["tooltip"]:
+                if count == 0:
+                    print(champ, spell["id"])
+                    print(spell["tooltip"])
+                print(var)
+                count += 1
+        if count > 0:
+            print()
+
+# Outputs
+# Akali AkaliShadowDance
+# Akali quickly strikes through her target, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.<br /><br />Akali stores an Essence of Shadow on kills and assists as well as every <span class="colorFFFFFF">{{ f1 }}</span> seconds up to {{ e4 }} total.
+# {'link': '@cooldownchampion', 'coeff': [22.5, 15], 'key': 'f2'}
+
+# Find repeated vars
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        seen = dict()
+        for var in spell["vars"]:
+            key = var["key"]
+            if key not in seen:
+                seen[key] = 1
+                continue
+            if key in seen:
+                seen[key] += 1
+
+        count = 0
+        for key, frequency in seen.items():
+            if frequency == 1:
+                continue
+            if count == 0:
+                print(champ, spell["id"])
+                print(spell["tooltip"])
+            print(str(var) + " is repeated " + str(frequency) + " times.")
+            count += 1
+        if count > 0:
+            print()
+
+
+# Find undeclared vars
+import re
+
+
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        tooltip = spell["tooltip"]
+        matches = re.findall('{{ ([af][0-9]+) }}', tooltip, re.DOTALL)
+        if matches:
+            undeclared = list()
+            for match in sorted(set(matches)):
+                if not any(match == var["key"] for var in spell["vars"]):
+                    undeclared.append(match)
+            if undeclared:
+                print(champ, spell["id"], "Undeclared vars: " + str(undeclared))
+                print(tooltip)
+                print()
+
+# Bad vars because they index a null ('e0' should be null)
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        tooltip = spell["tooltip"]
+        matches = re.findall('{{ ([aef]0)', tooltip, re.DOTALL)
+        if matches:
+            print(champ, spell["id"], "Bad vars in tooltip:", sorted(set(matches)))
+            print(tooltip)
+            print()
+
+
+# Bad var format
+known_exceptions = ('cost', 'castrange', 'ammorechargetime', 'maxammo')
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        tooltip = spell["tooltip"]
+        matches = re.findall('{{ ([^ }]+) }}', tooltip, re.DOTALL)
+        if champ == "MasterYi":
+            print(matches)
+        if matches:
+            bad_variable_box = set()
+            for match in matches:
+                if not re.match('[aef][0-9]+$', match) and not match in known_exceptions:
+                    bad_variable_box.add(match)
+            if bad_variable_box:
+                print(champ, spell["id"], "Bad format in tooltip:", sorted(bad_variable_box))
+                print(tooltip)
+                print()
+
+
+# Repeated properties
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        count = 0
+        for index in range(1, 11):
+            effect_string = spell["effectBurn"][index]
+            if effect_string == "0":
+                continue
+
+            for a in attrs:
+                if spell[a + "Burn"] == effect_string:
+                    if count == 0:
+                        print(champ, spell["id"])
+                    print("e" + str(index) + " == " + a + "Burn;", effect_string)
+                    count += 1
+        if count > 0:
+            print()
+
+
+# Hardcoded numbers in tooltips
+for champ, data in champs_data.items():
+    for spell in data["spells"]:
+        tooltip = spell["tooltip"]
+        var_formatting = re.findall("(\(*\+*[ ]*{{ [^ ]+ }}[ ]*\)*%*)", tooltip)
+        html = re.findall("(<[^>]*>)", tooltip)
+        matches = var_formatting + html
+        tooltip_compressed = tooltip
+        for match in matches:
+            tooltip_compressed = tooltip_compressed.replace(match, " " if match.endswith(" ") else "")
+
+        if any(d.isdigit() for d in tooltip_compressed):
+            print(champ, spell["id"], "Tooltip contains hardcoded numbers")
+            print(tooltip)
+            print(tooltip_compressed)
+            print()

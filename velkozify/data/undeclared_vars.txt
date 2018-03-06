@@ -1,0 +1,491 @@
+Ahri AhriFoxFire Undeclared vars: ['f1']
+Releases three fox-fires that lock on to nearby enemies (prioritizes Champions) dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.<br /><br />Enemies hit with multiple fox-fires take 30% damage from each additional fox-fire beyond the first, for a maximum of {{ f1 }} damage to a single enemy.
+
+Alistar AlistarE Undeclared vars: ['f1', 'f2', 'f3']
+Alistar tramples the ground, ignoring unit collision and dealing {{ f1 }} <span class="color99FF99">(+{{ f2 }})</span> magic damage over {{e3 }} seconds to nearby enemies. Each pulse that damages at least one enemy champion grants Alistar a <span class="colorFF6E1C">Trample</span> stack.<br /><br />At {{ e5 }} <span class="colorFF6E1C">Trample</span> stacks Alistar empowers his next basic attack against an enemy champion to deal an additional <span class="colorFFFFFF">{{ f3 }}</span> magic damage and stun for {{ e6 }} second.
+
+Anivia FlashFrost Undeclared vars: ['f1']
+A massive chunk of ice flies toward target location, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage. <br /><br />At the end of its range or if Anivia activates the spell again, the missile detonates, doing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage in a small area and stunning units for {{ e4 }} seconds.<br /><br />Enemies damaged by Flash Frost are also slowed by {{ f1 }}% for {{ e5 }} seconds.
+
+Anivia GlacialStorm Undeclared vars: ['f1']
+<span class="colorFF9900">Activate: </span>Drains {{ e2 }} Mana per second. <br /><br />Anivia calls forth a driving rain of ice and hail that increases in size over {{ e7 }} seconds, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage per second to targets and slowing their Movement Speed by {{ e4 }}%. <br /><br />When the Glacial Storm is fully formed, it slows targets' Movement Speed by {{ f1 }}% and does {{ e3 }}% damage instead.
+
+Annie InfernalGuardian Undeclared vars: ['f1']
+Summons Tibbers, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to enemies in the target area. For the next 45 seconds, Tibbers burns nearby enemies for {{ e2 }} <span class="color99FF99">(+{{ a2 }})</span> per second and attacks for {{ e3 }} <span class="color99FF99">(+{{ f1 }})</span> as magic damage. Annie can control Tibbers by reactivating this ability.<br /><br />Tibbers <span class="colorFFEB7F">Enrages</span> when: summoned; Annie uses Pyromania on an enemy Champion; and when Annie dies.<br /><br /><span class="colorFFEB7F">Enrages</span>: Tibbers gains 275% Attack Speed and 100% Movement Speed, decaying over 3 seconds.
+
+Ashe AsheQ Undeclared vars: ['f1']
+<span class="colorFF9900">Passive: </span>Basic attacks grant Focus for {{ e1 }} seconds, stacking up to {{ e2 }} times. Stacks fall off one at a time, and at {{ e2 }} stacks, Ranger's Focus can be cast, consuming all Focus.<br /><br /><span class="colorFF9900">Active:</span> For {{ e3 }} seconds, Ashe gains {{ e4 }}% Attack Speed, and her basic attacks fire a flurry of arrows dealing <span class="colorFF8C00">{{ f1}}</span> physical damage. During this time, she does not stack Focus. Ranger's Focus applies Frost Shot.
+
+AurelionSol AurelionSolW Undeclared vars: ['f1', 'f2']
+<span class="colorFF9900">Passive: </span>Increases Star base damage by {{ e2 }}.<br /><br /><span class="colorFF9900">Toggle: </span>Aurelion Sol's Stars orbit at his <span class="color308BDB">Outer Limit</span> and deal {{ e1 }}% damage, for a total of {{ f1 }} <span class="color99FF99">(+{{ f2 }})</span> magic damage.<br />
+
+Azir AzirW Undeclared vars: ['f1', 'f2', 'f7']
+<span class="colorFF9900">Passive:</span> Azir gains {{ e3 }}% attack speed. When Azir has {{ e6 }} or more <span class="colorEED6AF">Sand Soldiers</span>, he gains {{ e7 }}% additional attack speed for {{ e8 }} seconds.<br /><br /><span class="colorFF9900">Active:</span> Azir summons a <span class="colorEED6AF">Sand Soldier</span> for {{ e1 }} seconds. When Azir attacks an enemy in a soldier's range, the soldier attacks in his stead, stabbing the target for <scaleLevel>{{ f2 }}</scaleLevel> <span class="color99FF99">(+{{ a1 }})</span> magic damage. Other enemies caught in the soldier's attack take <scaleLevel>{{ f7 }}%</scaleLevel> of the stab's damage.<br /><br />Azir stores up to {{ maxammo }} <span class="colorEED6AF">Sand Soldiers</span> and prepares a new one every <span class="colorFFFFFF">{{ f1 }}</span> seconds.<br /><br /><span class="color919191"><i>Sand Soldiers that strike the same targets deal {{ e9 }}% damage after the first.<br />Sand Soldiers can attack targets outside of Azir's basic attack range.<br />Sand Soldiers expire twice as fast when near an enemy turret.</i></span>
+
+Bard BardW Undeclared vars: ['f1', 'f2']
+Bard raises a health shrine that immediately offers {{ e5 }} <span class="color99FF99">(+{{ a1 }})</span> health, but restores up to {{ e6 }} <span class="color99FF99">(+{{ a2 }})</span> health as it gathers power for 10 seconds. The shrine's effect also grants {{ e1 }}% decaying movement speed for {{ e2 }} seconds. <br /><br />Bard can have up to {{ e3 }} shrines active at once, which remain until visited by an ally champion or crushed by an enemy champion.<br /><br /><span class="colorFFCC00">Active Shrines: </span><span class="colorFFFFFF">{{ f1 }}</span> / <span class="colorFFCC00">{{ f2 }}</span></mainText><br />
+
+Braum BraumQ Undeclared vars: ['f1']
+Braum propels freezing ice from his shield dealing {{ e1 }} <span class="colorCC3300">(+{{ f1 }}) [2.5% of Braum's Max Health]</span> magicdamage to the first enemy hit and slowing them by {{ e2 }}%, decaying over the next {{ e5 }} seconds.<br /><br />Applies a stack of <span class="colorFFF673">Concussive Blows</span>.
+
+Caitlyn CaitlynPiltoverPeacemaker Undeclared vars: ['f1']
+Revs the rifle for {{ e4 }} second to fire a narrow piercing shot dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage. After hitting any target, it opens into a wider shot that deals {{ e2 }}% less damage. <br /><br />Always deals full damage to trap revealed targets.
+
+Caitlyn CaitlynYordleTrap Undeclared vars: ['f1']
+Sets traps that an enemy Champion can spring, immobilizing them for {{ e6 }} seconds and granting <span class="coloree91d7">True Sight</span> for a short duration.<br /><br />Traps last for {{ e3 }} seconds. {{ e5 }} traps may be active at once.<br /><br />Trapped enemies take an additional {{ e2 }} <span class="colorFF8C00">(+{{ f1 }})</span> increased damage from Headshot.
+
+Camille CamilleQ Undeclared vars: ['f1', 'f2', 'f3']
+Camille's next basic attack deals <span class="colorFF8C00">{{ f1 }}</span> bonus physical damage and increases her movement speed by {{ e4}}% for {{ e5 }} second. This ability can be recast in the next {{ e0 }} seconds at no cost.<br /><br />If the second Precision Protocol attack hits at least {{ e1 }} seconds after the first, the bonus damage is increased by {{ e8 }}% to <span class="colorFF8C00">{{ f2 }}</span>and <span class="colorFFFFFF">{{ f3 }}%</span> of the attack is converted into true damage.<br /><br /><span class="size16 colorFFEB7F">Precision Protocol</span> <span class="size16 color8C8C8C">cannot critically strike.</span>
+
+Camille CamilleW Undeclared vars: ['f1', 'f2']
+Camille winds up and then slices in a direction, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage to enemies hit.<br /><br />Enemies hit by the outer half are slowed by {{ e4 }}%, decaying over {{ e2 }} seconds. They take extra physical damage equal to {{ e5 }}% (<span class="colorFF8C00">+{{ f2 }}</span>%) of their maximum health, and Camille heals for {{ e9 }}% of the bonus damage dealt to champions.<br /><br /><span class="size16 colorFFEB7F">Tactical Sweep</span> <span class="size16 color8C8C8C">does {{ e8 }}% less damage to non-epic monsters.</span>
+
+Camille CamilleE Undeclared vars: ['f1']
+<span class="colorFF8C00">First Cast:</span> Fire a hookshot that attaches to terrain, pulling Camille to it and allowing Hookshot to be recast for 1 second.<br /><br /><span class="colorFF8C00">Second Cast:</span> Camille leaps from the wall, colliding with the first enemy champion hit. Upon landing, she deals {{ e3 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage and a {{ e1 }} second stun to nearbyenemies. Dashes towards enemy champions travel twice as far and grant {{ e2 }}% attack speed for {{ e5 }} seconds on impact.
+
+Cassiopeia CassiopeiaE Undeclared vars: ['f2', 'f4']
+Deal <span class="colorFFFFFF">{{ f1 }}</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage to a target. If the target is killed by Twin Fang, or is killed during its flight, Cassiopeia gains {{ cost }} Mana.<br /><br />If the victim is <span class="color32CD32">Poisoned</span> when Twin Fang hits, it takes {{ e1 }} <span class="color99FF99">(+{{ a2 }})</span> additional magic damage and Cassiopeia heals for <span class="colorFFFFFF">{{ f4 }}</span> <span class="color99FF99">(+{{ f2 }})</span>.
+
+Chogath VorpalSpikes Undeclared vars: ['f1']
+Cho'Gath's next 3 basic attacks launch spikes that deal {{ e1 }} <scaleAP>(+{{ a1 }})</scaleAP> plus {{ f1 }}% of enemies' maximum Health as magic damage and slow by {{ e2 }}% for {{ e3 }} seconds, decaying over the duration.<br /><br /><rules>Spikes grow wider as Cho'Gath gainsFeast stacks.<br />Spikes deal an additional 0.5% of enemies' maximum Health per Feast stack.<br />Percent Health damage against minions and monsters is capped at {{ e8 }}.</rules>
+
+Chogath Feast Undeclared vars: ['f2', 'f3']
+Ravenously feed on an enemy, dealing {{ e2 }} <scaleHealth>(+{{ f2 }})</scaleHealth> <scaleAP>(+{{ a2 }})</scaleAP> true damage to champions or {{ e1 }} <scaleHealth>(+{{ f2 }}) </scaleHealth><scaleAP>(+{{ a2 }})</scaleAP> to minions and monsters. If the target is killed, Cho'Gath gains a stack of Feast, which causes him to grow in size and gain {{ e3 }} maximum health.<br /><br /><rules>Only {{ e4 }} total stacks can be gained from minions and non-epic monsters. <span class="colorFFF673">(Current: {{ f3 }}/{{ e4 }})</span></rules>
+
+Corki CarpetBomb Undeclared vars: ['f1', 'f2']
+<span class="colorFF9900">Active:</span> Corki flies a short distance, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage per second to enemies in the fire left along his path.<br /><br /><span class="colorFF9900">Special Delivery:</span> Corki flies a great distance, dropping bombs that knock aside enemies and leave a burning trail for 5 seconds. The trail slows enemies by {{ e2 }}% and burns them for {{ f1 }} <span class="colorFF8C00">(+{{ f2 }})</span> <span class="color99FF99">(+{{ a2 }})</span> magic damage per second.
+
+Corki MissileBarrage Undeclared vars: ['f2']
+<span class="colorFF9900">Active:</span> Corki fires a missile that explodes at the first enemy it hits, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage to all nearby enemies.<br /><br />Corki can store up to 7 missiles, and every 3rd missile will be a Big One, dealing {{ f2 }}% damage ({{ f3 }})</span>.
+
+Darius DariusNoxianTacticsONH Undeclared vars: ['f1']
+ Darius's next basic attack deals <span class="colorFF8C00">{{ f1 }}</span> physical damage and slows the target by {{ e2 }}% for {{ e5 }} second.<br /><br />Crippling Strike refunds its Mana cost and {{ e3 }}% of its cooldown if it kills the target.
+
+DrMundo InfectedCleaverMissileCast Undeclared vars: ['f1', 'f2']
+Dr. Mundo hurls his cleaver, dealing {{ e2 }}% of the target's current health as magic damage (no less than {{ e1 }}) and slowing them by {{ e4 }}% for {{ e5 }} seconds.<br /><br />If the cleaver hits, {{ f1 }} health is refunded ({{ f2 }} if the cleaver kills).<br /><br /><rules>Infected Cleaver deals no more than {{ e6 }} damage against monsters.</rules>
+
+DrMundo Masochism Undeclared vars: ['f1', 'f2', 'f5']
+<spellPassive>Passive:</spellPassive> When Dr. Mundo suffers magic damage or pays a health cost, his magic resist is increased by {{ e8 }}%for {{ e0 }} seconds, up to a maximum of {{ f3*100 }}%.<br /><br /><spellActive>Active:</spellActive> Dr. Mundo's next basic attack will headbutt the enemy, dealing an additional <scaleHealth>{{ f1 }}</scaleHealth> physical damage ({{ e1 }}% of maximum health) at the cost of {{ e2 }} health.<br /><br />Upon activation, Dr. Mundo gains up to {{ e4 }} attack damage (no less than {{ e5 }}) for {{ e6 }} seconds based onhis missing health.<br /><br /><rules>Masochism grants {{ f2 }} attack damage above the minimum for every 1% of missing health (<scaleHealth>{{ f5 }}</scaleHealth>).
+
+DrMundo Sadism Undeclared vars: ['f1']
+Dr. Mundo regenerates <scaleHealth>{{ f1 }}</scaleHealth> Health ({{ e1 }}% of max health) over {{ e2 }} seconds, and gains {{ e3 }}% movement speed for the duration.
+
+Evelynn EvelynnE Undeclared vars: ['f2']
+Whip target with Lashers, applying on hit effects and dealing magic damage equal to {{ f1 }} plus {{ e5 }}% <span class="color99FF99">(+{{ a1 }}%)</span> of their max health. Then, gain {{ e3 }}% movement speed for {{ e4 }} seconds.<br /><br />Entering <span class="color9542f4">Demon Shade</span> resets <span class="colorFFFFFF"><i>Whiplash's</i></span> cooldown and empowers it. When empowered, <span class="colorFFFFFF"><i>Whiplash</i></span> pulls Evelynn to her target, dealing magic damage to them and enemies in the way equal to {{ f2 }} plus {{ e6 }}% <span class="color99FF99">(+{{ a2 }}%)</span> of their max health.
+
+Evelynn EvelynnR Undeclared vars: ['f1', 'f2']
+Evelynn unleashes her demonic energy, becoming untargetable and decimating enemies in front of her. She then warps backwards. Deals {{ e1 }}<span class="color99FF99"> (+{{ a1 }})</span> magic damage, increased to {{ f1 }}<span class="color99FF99"> (+{{ f2 }})</span> to enemies below {{ e7 }}% health.
+
+Fiddlesticks Drain Undeclared vars: ['f1', 'f2']
+Fiddlesticks creates a tether to the target unit and channels <span class="colorFFEB7F">Drain</span> on it, granting <span class="coloree91d7">True Sight</span> and dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage per second to the target. Fiddlesticks heals for {{ e3 }}% of the damage dealt.<br /><br /><span class="colorFFEB7F">Drain</span> lasts up to {{ e4 }} seconds, dealing a total of {{ f1 }} <span class="color99FF99">(+{{ f2 }})</span> damage.<br /><br /><span class="size16 color8C8C8C"><span class="size16 colorFFEB7F">Drain</span> <span class="size16 color8C8C8C">returns cooldown equal to its remaining duration if the target dies.</span>
+
+Fiddlesticks Crowstorm Undeclared vars: ['f1', 'f2']
+Fiddlesticks channels for {{ e3 }} seconds, then blinks to the target point unleashing a murder of crows that flock wildly around him, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage per second to all enemy units in the area.<br /><br />The effect lasts for {{ e2 }} seconds, dealing up to {{ f1 }} <span class="color99FF99">(+{{ f2 }})</span> total magic damage.
+
+Fiora FioraW Undeclared vars: ['f1']
+Fiora parries all incoming damage, debuffs, and disables for the next {{ e2 }} seconds and then stabs in the target direction.<br /><br />The stab deals {{ e1 }} <span class="color99FF99">(+{{ f1 }})</span> magic damage to the first enemy champion hit and slows their movement and attack speed by {{ e4 }}% for {{ e3 }} seconds. <br /><br />If Fiora parries an immobilizing effect, Riposte stuns instead of slowing.
+
+Fiora FioraE Undeclared vars: ['f3', 'f4']
+Fiora gains {{ e4 }}% attack speed for her next two attacks. The first attack cannot critically strike, but will apply a {{ e3 }}% slow for{{ e2 }} second. The second attack is guaranteed to critically strike for {{ f4 }}% damage <span class="colorFF8C00">({{ f3 }})</span>.
+
+Fiora FioraR Undeclared vars: ['f6', 'f8', 'f9']
+Fiora reveals all four <span class="colorD4BD22">Vitals</span> on target champion, for a potential <span class="colorFFFFFF">{{ f8 }}%</span> max health true damage. In addition, Fiora gains Duelist's Dance's movement speed bonus <span class="colorFFFFFF">({{ f6 }}%)</span> while near the target.<br /><br />If Fiora hits all 4 <span class="colorD4BD22">Vitals</span> in {{ e1 }} seconds or if the target dies after she has hit at least one, Fiora and her allies in the area are healed for {{ e7 }} <span class="colorFF8C00">(+{{ f9 }})</span> each second for between {{ e9 }} to {{ e6 }} seconds, scaling with the amount of Vitals hit.
+
+Galio GalioQ Undeclared vars: ['f9']
+Galio fires two windblasts that deal {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.<br /><br />When the windblasts meet, they combine into a giant tornado that deals {{ e5 }} <span class="color99FF99">(+{{ charabilitypower2.0*3 }})</span> plus <span class="color99FF99">(+{{ f9 }})</span>% of enemies' maximum Health (max {{ e4 }} vs. monsters) as magic damage over {{ e3 }} seconds.
+
+Galio GalioW Undeclared vars: ['f10', 'f11', 'f2', 'f3', 'f4', 'f5', 'f8', 'f9']
+<span class="colorFF9900">Passive:</span> After not taking damage for {{ e6 }} seconds Galio gains a shield that absorbs <span class="colorFF0000">{{ f3 }}</span> magic damage.<br /><br /><span class="colorFF9900">First Cast:</span> Galio starts to charge, gaining {{ e1 }} <spanclass="colorFF00FF">(+{{ f2 }})</span><span class="color99FF99">(+{{ f4 }})</span>% Damage Reduction from Magic Damage and {{ f5 }}% of that amount as Damage Reduction from Physical Damage. While charging, Galio slows himself by {{ e3 }}%.<br /><br /><span class="colorFF9900">Second Cast:</span> Galio taunts nearby enemy champions for {{ e4 }} to {{ e7 }} seconds, deals {{ f8 }} <span class="color99FF99">(+{{ f9 }})</span> to {{ f10 }} <span class="color99FF99">(+{{ f11 }})</span> damage, and refreshes the Damage Reduction for {{ e8 }} seconds. Taunt duration, damage, and radius increase with charge time.<br /><br /><span class="colorDDDD77">Shield of Durand's charge cannot be interrupted by crowd control.</span>
+
+Galio GalioR Undeclared vars: ['f2']
+Galio designates an allied champion's current position as his landing spot and grants {{ e5 }} <span class="colorFF00FF">(+{{ f2 }})</span>% damage reduction to that ally until he lands. <br /><br />When Galio lands, enemies in the area take {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and are knocked into the air for {{ e3 }} seconds ({{ e2 }} seconds in the center).
+
+Gangplank GangplankE Undeclared vars: ['f5']
+Places a powder keg that can be attacked by Gangplank or his enemies at a location for {{ e5 }} seconds.<br /><br />If Gangplank destroys akeg, it explodes dealing <span class="colorFF8C00">the attack's damage</span> as physical damage (ignores {{ e0 }}% Armor) to enemies and slowing them by {{ e4 }}% for {{ e2 }} seconds. Champions take {{ e3 }} bonus physical damage from the explosion.<br /><br />When a keg explodes, other kegs with overlapping blast zones chain explode (damage does not stack).<br /><br />Kegs health decays every {{ f5 }} seconds. (Decay rate increases at level 7 and 13)<br /><br /><span class="colorffd700">Keg explosions apply Parrrley's plunder effect.</span>
+
+Gangplank GangplankR Undeclared vars: ['f3']
+Signals Gangplank's ship to fire {{ f3 }} waves of cannonballs at an area over {{ e3 }} seconds. Each wave deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and slows enemies by {{ e2 }}% for {{ e6 }} seconds.<br /><br /><span class="colorffd700">Collect Silver Serpents with Parrrley to upgrade in the shop.</span>
+
+Garen GarenW Undeclared vars: ['f1', 'f2']
+<span class="colorFF9900">Passive:</span> Killing units permanently grants {{ f2 }} armor and magic resist, up to a maximum of {{ e2 }}. Current Bonus: <span class="colorFFFFFF">{{ f1 }}</span><br /><br /><span class="colorFF9900">Active: </span>Garen steels his courage for {{ e4 }} seconds. For the first {{ e7 }} seconds, he takes {{ e6 }}% less damage and gains {{ e5 }}% Tenacity. For the remaining duration, he takes {{ e3 }}% less damage.
+
+Garen GarenE Undeclared vars: ['f1', 'f2', 'f3']
+Garen rapidly spins his sword around his body for {{ e2 }} seconds, dealing {{ f3 }} physical damage to nearby enemies -- {{ e1 }} plus {{ e3 }}% of his attack damage <span class="colorFF8C00">(+{{ f1 }})</span>, <span class="colorFFFFFF">{{ f2 }}</span> times (increased by 1 every 3 champion levels) -- over the duration.<br /><br />Enemy champions hit by {{ e6 }} spins lose {{ e5 }}% of their armor for {{ e7 }} seconds.<br /><br /><span class="color99FF99">Judgment deals {{ e4 }}% increased damage when striking only one enemy.<br />Cancelling Judgment returns cooldown equal to the remaining duration.<br /><span class="color99FF99">Judgment can critically strike for bonus damage.</span>
+
+Gnar GnarQ Undeclared vars: ['f1']
+<span class="color33FF33">Mini Gnar: </span>Throws a boomerang that deals {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage and slows enemies by {{ e3 }}% for {{ e4 }} seconds. The boomerang returns towards Gnar after hitting an enemy, dealing {{ e7 }}% damage to subsequent targets. Each enemy can only be hit once. Catching the boomerang reduces its cooldown by {{ f1 }}%.<br /><br /><span class="colorFF3300">Mega Gnar: </span>Throws a boulder that stops when it hits an enemy, slowing all nearby enemies and dealing {{ e2 }} <span class="colorFF8C00">(+{{ a2 }})</span> physical damage. Picking up the boulder reduces its cooldown by {{ e6 }}%.
+
+Gnar GnarW Undeclared vars: ['f1']
+<span class="color33FF33">Mini Gnar: </span><span class="colorFF9900">Passive:</span> Every 3rd attack or spell on the same target deals anadditional {{ e1 }} <span class="color99FF99">(+{{ a1 }}) </span>+ {{ e2 }}% of the target's max Health as magic damage and grants Gnar {{ f1 }}% Movement Speed that decays over 3 seconds (max {{ e4 }} damage vs. monsters). <br /><br /><span class="colorFF3300">Mega Gnar: </span>Stuns enemies in an area for {{ e5 }} seconds, dealing {{ e3 }}<span class="colorFF8C00"> (+{{ a2 }})</span> physical damage.<br /><br />Gnar gains Hyper's Movement Speed bonus when he leaves Mega form.
+
+Gnar GnarE Undeclared vars: ['f1']
+<span class="color33FF33">Mini Gnar: </span>Leaps to a location, gaining {{ e2 }}% Attack Speed for 3 seconds. If Gnar lands on a unit he will bounce off it, traveling further. Deals {{ e1 }} <span class="colorCC3300">(+{{ f1 }}) [6% of Gnar's Max Health]</span> physical damage and slows briefly if the unit landed on was an enemy.<br /><br /><span class="colorFF3300">Mega Gnar: </span>Leaps to a location and deals {{ e1 }} <span class="colorCC3300">(+{{ f1 }}) [6% of Gnar's Max Health]</span> physical damage to nearby enemies on landing. Enemies Gnar lands directly on top of are slowed briefly.<br /><br />If Crunch is used to transform, Gnar will still be able to bounce.
+
+Gragas GragasE Undeclared vars: ['f1']
+Gragas charges forward, colliding with the first enemy unit. He deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage toenemies in the area and bumps them back, stunning them for {{ e2 }} second.<br /><br />Body Slam's Cooldown is reduced by {{ f1 }} seconds if Gragas collides with a unit.
+
+Graves GravesQLineSpell Undeclared vars: ['f1', 'f2']
+Fires a powder round that deals {{ e1 }}<span class="colorFF8C00"> (+{{ f1 }})</span> physical damage to enemies in a line.<br /><br />After 2 seconds or {{ e6 }} seconds on collision with terrain, the round detonates, dealing {{ e2 }}<span class="colorFF8C00"> (+{{ f2 }})</span> physical damage to all nearby enemies.
+
+Graves GravesChargeShot Undeclared vars: ['f1', 'f2']
+Fires an explosive shell with such force that it knocks Graves back. The shell deals {{ e1 }}<span class="colorFF8C00"> (+{{ f1 }})</span> physical damage to the first enemy hit. After hitting an enemy Champion or reaching the end of its range, the shell explodes, dealing {{ e2 }}<span class="colorFF8C00"> (+{{ f2 }})</span> physical damage in a cone.
+
+Illaoi IllaoiQ Undeclared vars: ['f1']
+<span class="colorFF8C00">Passive:</span> <span class="color85FFAD">Slam</span> damage is increased by {{ e6 }}% (<span class="colorFF8C00">{{ f1 }}</span>).<br /><br /><span class="colorFF8C00">Active:</span> Illaoi swings her idol, causing a Tentacle to <span class="color85FFAD">Slam</span> forward.
+
+Illaoi IllaoiE Undeclared vars: ['f1', 'f5']
+Illaoi pulls the spirit from an enemy champion for {{ e3 }} seconds (reduced when Illaoi is attacked by the target). The spirit can be attacked, with {{ e1 }}% <span class="colorFF8C00">(+{{ f5 }}%)</span> of the damage taken echoing to its owner.<br /><br />If the spirit dies or the target leaves its range, the target becomes a <span class="color669900">Vessel</span> for {{ e2 }} seconds and is slowed by {{ e8 }}% for {{ e5 }} seconds. <span class="color669900">Vessels</span> spawn Tentacles every <span class="colorFFFFFF">{{ f1 }}</span> seconds if noother Tentacles are nearby.<br /><br />Tentacles will automatically <span class="color85FFAD">Slam</span> at spirits and <span class="color669900">Vessels</span> once every 10 seconds.
+
+Irelia IreliaGatotsu Undeclared vars: ['f1']
+Irelia dashes forward to strike her target, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage and applying on-hit effects.<br /><br />If it kills the target, Bladesurge's cooldown is refreshed and Irelia gains {{ e2 }} Mana.
+
+Ivern IvernQ Undeclared vars: ['f1']
+Ivern conjures a vine dealing {{ e5 }} <span class="color99FF99">(+{{ f1 }})</span> magic damage and rooting the first enemy hit for {{ e1 }} second(s). Allies can click on rooted enemies to dash into attack range.
+
+Ivern IvernW Undeclared vars: ['f2']
+<span class="colorFF9900">Passive:</span> In brush, Ivern's attacks are ranged and deal {{ e5 }} <span class="color99FF99">(+{{ f2 }})</span> bonus magic damage.<br /><br /><span class="colorFF9900">Active:</span> Ivern grows a patch of brush for {{ e1 }} seconds. For 3 seconds the area in and around the brush is revealed.
+
+Ivern IvernE Undeclared vars: ['f3', 'f4']
+Ivern shields an ally, absorbing up to {{ e1 }} <span class="color99FF99">(+{{ f3 }})</span> damage. After 2 seconds, the shield bursts dealing {{ e2 }} <span class="color99FF99">(+{{ f4 }})</span> magic damage and slowing enemies by {{ e3 }}% for {{ e4 }} seconds.<br /><br /><rules><span class="colorFFFF00">Can also be cast on Daisy.</span></rules>
+
+Ivern IvernR Undeclared vars: ['f1', 'f2', 'f3', 'f4', 'f6']
+Ivern summons his sentinel friend Daisy for {{ f6 }} seconds. If Daisy attacks the same champion three times in a row, she will create a shockwave knocking enemies up for 1 second (3s cooldown). Daisy has:<li>Health: {{ e1 }} <span class="color99FF99">(+{{ f1 }})</span><br />Armor and Magic Resist: {{ e2 }} <span class="color99FF99">(+{{ f2 }})</span><br />Attack Damage: {{ f4 }} <span class="color99FF99">(+{{ f3 }})</span></li><br /><rules><span class="colorFFFF00">Recast to manually issue orders to Daisy.</span></rules>
+
+Janna SowTheWind Undeclared vars: ['f3']
+<span class="colorFF9900">Passive:</span> While Zephyr is not on cooldown, Janna gains {{ e1 }}% <span class="color99FF99">(+{{ f1 }}%)</span> Movement Speed and can move through units.<br /><br /><span class="colorFF9900">Active: </span>Deals {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorFFF673">(+{{ f3 }})</span> magic damage to an enemy and slows their Movement Speed by {{ e3 }}% <span class="color99FF99">(+{{ f2 }}%)</span> for {{ e4 }} seconds.
+
+JarvanIV JarvanIVGoldenAegis Undeclared vars: ['f1']
+Grants a shield that absorbs {{ e1 }} (<span class="colorCC3300">+{{ f1 }}</span> [{{ e6 }}% max Health] for each nearby enemy champion) damage for {{ e4 }} seconds, and slows surrounding enemies by {{ e2 }}% for {{ e5 }} seconds.
+
+Jayce JayceStanceHtG Undeclared vars: ['f3']
+<span class="colorFF8C00">Active: </span>Transforms the Mercury Hammer into the Mercury Cannon gaining new abilities and ranged attacks.<br/><br />The next attack in Cannon Stance reduces the target's Armor and Magic Resist by {{ f3 }}% for {{ e3 }} seconds.
+
+Jhin JhinQ Undeclared vars: ['f1']
+Jhin launches a cartridge at the targeted enemy that deals {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ a1 }}) </span>physical damage before bouncing to a nearby target that has not yet been hit.<br /><br />The cartridge can hit a maximum of 4 times. Each kill by the cartridge increases the damage of subsequent hits by {{ e2 }}%.
+
+Jhin JhinE Undeclared vars: ['f1']
+Jhin places an invisible Lotus Trap that lasts {{ e5 }} minutes and activates when stepped on, revealing nearby enemies for 4 seconds.<br /><br />The trap leaves behind a zone that slows enemies inside by {{ e7 }}% and detonates after 2 seconds, dealing {{ e2 }} <span class="colorFF8C00">(+{{ a1 }})</span> <span class="color99FF99">(+{{ a2 }})</span> magic damage ({{ e1 }}% damage on subsequent hits and vs. minions and monsters).<br /><br />Jhin prepares a new trap every <span class="colorFFFFFF">{{ f1 }}</span> seconds and can store 2 at once. <br /><br /><span class="colorFFFFFF">Beauty in Death -</span> When Jhin kills an enemy champion a Lotus Trap will spawn and detonate where they were killed.
+
+Jhin JhinR Undeclared vars: ['f1', 'f2', 'f3']
+Jhin sets up and channels, enabling him to fire 4 super shots at extreme range in a cone in front of him. The shots stop on the first champion hit, slowing it by {{ e3 }}% for {{ e4 }} seconds and dealing {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage, increased by {{ e5 }}% for each 1% health the target is missing (up to {{ f2 }} <span class="colorFF8C00">(+{{ f3 }})</span>). The 4th shot <span class="colorFF5802">crits</span> for <span class="colorFFFFFF">{{ f1 }}%</span> damage.
+
+Kaisa KaisaQ Undeclared vars: ['f2', 'f3', 'f5', 'f7', 'f8']
+Kai'Sa launches {{ e2 }} missiles that split among nearby enemies, each dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> <spanclass="color99FF99">(+{{ f7 }})</span> physical damage. Additional hits on a champion or monster deal {{ e3 }}% damage (max: {{ f3 }} <spanclass="colorFF8C00">(+{{ f2 }})</span> <span class="color99FF99">(+{{ f8 }})</span>).<br /><br /><span class="size16 color8C8C8C"><span class="colorFFFFFF">Living Weapon -</span> <span class="colorFF8C00">{{ e6 }} Bonus Attack Damage</span> (<span class="colorFFFFFF">current:</span> <span class="colorFF8C00">{{ f5 }}</span>) - Icathian Rain fires {{ e7 }} missiles.</span><br /><br /><span class="size16 color8C8C8C">Minions below {{ e5 }}% health take {{ e4 }}% damage.</span>
+
+Kaisa KaisaW Undeclared vars: ['f2', 'f3']
+Kai'Sa fires a Void blast that grants <span class="coloree91d7">True Sight</span> on the first enemy hit, deals {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ f2 }})</span> magic damage, and applies {{ e4 }} stacks of <span class="colorB342F4">Plasma.</span><br /><br /><span class="size16 color8C8C8C"><span class="colorFFFFFF">Living Weapon -</span> <span class="color99FF99">{{ e2 }} Ability Power</span> (<span class="colorFFFFFF">current:</span> <span class="color99FF99">{{ f3 }}</span>) - Void Seeker applies {{ e5}} stacks of <span class="colorB342F4">Plasma</span> and refunds {{ e3 }}% cooldown on champion hit.</span>
+
+Kaisa KaisaE Undeclared vars: ['f1', 'f2', 'f4']
+Kai'Sa spends <span class="colorFF0000">{{ f1 }}</span> seconds Supercharging her Void Energy. She gains <span class="colorFF0000">{{ f4 }}%</span> Movement Speed during the charge, and {{ e5 }}% Attack Speed for {{ e2 }} seconds when charged.<br /><br /><span class="size16 color8C8C8C"><span class="colorFFFFFF">Living Weapon </span>- <span class="colorFF0000">{{ e6 }}% Attack Speed</span> (<span class="colorFFFFFF">current:</span> <span class="colorFF0000">{{ f2 }}%</span>) - Supercharge grants <span class="color91d7ee">Invisibility</span> for {{ e7 }}seconds.<br /><br /><span class="size16 color8C8C8C">Basic attacks reduce Supercharge's cooldown by {{ e4 }} seconds. Supercharge's cast time and Movement Speed improve with Attack Speed.</span>
+
+Kaisa KaisaR Undeclared vars: ['f1', 'f2']
+Kai'Sa warps to a location near an enemy champion affected by <span class="colorB342F4">Plasma</span>, gaining a shield that absorbs {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ f2 }})</span> damage for {{ e3 }} seconds.
+
+Karma KarmaQ Undeclared vars: ['f3']
+Fires a blast of energy that explodes upon enemy contact, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and slowing Movement Speed by {{ e2 }}% for {{ e3 }} seconds. <br /><br /><span class="colorFF9900">Mantra Bonus - Soulflare:</span> Deals {{ f1 }} <span class="color99FF99">(+{{ a2 }})</span> additional magic damage and leaves a circle of flame that slows enemies by {{ f3 }}%. After 1.5 seconds the circle erupts, dealing {{ f2 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to enemies in the area.
+
+Karma KarmaSpiritBind Undeclared vars: ['f2', 'f3', 'f4']
+Links Karma to an enemy champion or monster, granting <span class="coloree91d7">True Sight</span> and dealing {{ effect1amount*0.5 }} <spanclass="color99FF99">(+{{ f4 }}) </span>magic damage. If the link is unbroken for {{ e3 }} seconds, the target is rooted for {{ e2 }} second(s) and takes an additional {{ effect1amount*0.5 }} <span class="color99FF99">(+{{ f4 }}) </span>magic damage.<br /><br /><span class="colorFF9900">Mantra Bonus - Renewal:</span> Karma is healed for {{ f1 }}% <span class="color99FF99">(+{{ f3 }}%)</span> of her missing health. Ifthe link is not broken or the target dies, the root duration is increased by {{ f2 }} second(s) and Karma is healed for {{ f1 }}% <span class="color99FF99">(+{{ f3 }}%)</span> of her missing health.
+
+Karma KarmaSolKimShield Undeclared vars: ['f2', 'f3']
+Target ally gains a shield, granting {{ e3 }}% Movement Speed for {{ e2 }} seconds and absorbing {{ e1 }} <span class="color99FF99">(+{{ a1}})</span> damage for {{ e4 }} seconds.<br /><br /><span class="colorFF9900">Mantra Bonus - Defiance:</span> The shield overflows with energy, absorbing an additional {{ f1 }} <span class="color99FF99">(+{{ a2 }})</span> damage. Nearby allied champions gain shields that absorb {{ f2 }}% as much as the initial target's shield. All champions shielded gain {{ f3 }}% movement speed for {{ e2 }} seconds.
+
+Kassadin RiftWalk Undeclared vars: ['f1', 'f2', 'f3']
+Kassadin teleports to a nearby location dealing {{ e1 }} <span class="color44DDFF">(+{{ f2 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage to surrounding enemy units.<br /><br />Each subsequent Riftwalk within the next {{ e2 }} seconds doubles the Mana cost and deals an additional {{ e3 }} <span class="color44DDFF">(+{{ f1 }})</span> <span class="color99FF99">(+{{ f3 }})</span> magic damage per stack, stacking up to {{ e6 }} times.
+
+Katarina KatarinaEWrapper Undeclared vars: ['f1']
+Katarina dashes in the blink of an eye to the target ally, enemy, or <span class="colorFFF673">Dagger</span>. If it is an enemy, Katarina strikes for {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> <span class="color99FF99">(+{{ a2 }})</span> magic damage - otherwise she strikes the nearest enemy in range.<br /><br />Picking up a <span class="colorFFF673">Dagger</span> will reduce Shunpo's cooldown by <span class="colorFFFFFF">{{ f1 }}</span> seconds (<span class="colorFFFFFF">{{ f3*100 }}%</span>).<br /><br /><span class="size16 color8C8C8C">Katarina can blink to any location near the target.</span>
+
+Katarina KatarinaR Undeclared vars: ['f2', 'f3']
+Katarina becomes a flurry of blades, rapidly throwing knives at the three nearest enemy champions, dealing {{ e1 }} <span class="colorFF8C00">(+{{ a2 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage per knife. Total over {{ e3 }} seconds to each enemy: {{ f1 }} <span class="colorFF8C00">(+{{ f2 }})</span> <span class="color99FF99">(+{{ f3 }})</span> magic damage.<br /><br />Applies Grievous Wounds to all enemies struck, reducing their healing and regeneration by 40%.
+
+Kennen KennenBringTheLight Undeclared vars: ['f1']
+<span class="colorFF9900">Passive:</span> Every 5 attacks, Kennen deals bonus magic damage equal to {{ e2 }} <scaleAD>(+{{ f1 }})</scaleAD><scaleAP>(+{{ a2 }})</scaleAP> and adds a Mark of the Storm to his target.<br /><br /><span class="colorFF9900">Active:</span> Sends a surge of electricity through all nearby enemies affected by Mark of the Storm or Slicing Maelstrom, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.
+
+Khazix KhazixQ Undeclared vars: ['f1']
+Deals {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage. If the target is <span class="colorFFF673">Isolated</span>, the damage is increased by {{ e2 }}% (<span class="colorFF8C00">{{ f1 }}</span>).<br /><br /><span class="color00DD33">Evolved Reaper Claws:</span> Increases the range of Taste Their Fear and Kha'Zix's basic attacks by {{ e3 }}. If target is <span class="colorFFF673">Isolated</span>, refunds {{ e4 }}% of Taste Their Fear's cooldown.
+
+Khazix KhazixR Undeclared vars: ['f1']
+<span class="colorFF9900">Passive:</span> Ranking up Void Assault allows Kha'Zix to evolve one of his abilities.<br /><br /><span class="colorFF9900">Active:</span> Kha'Zix becomes <span class="color91d7ee">Invisible</span> for {{ e1 }} seconds and activates Unseen Threat. While<span class="color91d7ee">Invisible</span>, he gains {{ e3 }}% movement speed and ignores unit collision. Void Assault can be cast a secondtime within {{ e2 }} seconds.<br /><br /><span class="color00DD33">Evolved Adaptive Cloaking:</span> While out of combat, Kha'Zix also passively gains Void Assault for {{ e5 }} seconds in brush. This persists for up to {{ f1 }} seconds after exiting the brush ({{ f1 }} second per brush cooldown).<br /><br /><u><span class="size16 color91d7ee">Stealth - Invisible</span></u><span class="size16 colorb3b3b3">: Kha'Zix can only be revealed by nearby enemy Turrets or <span class="size16 coloree91d7">True Sight</span>.</span>
+
+Kindred KindredQ Undeclared vars: ['f2']
+Lamb vaults, firing up to 3 arrows at nearby enemies, dealing {{ e1 }}<span class="colorFF8C00"> (+{{ a1 }})</span> physical damage and gains <scaleLevel>{{ f2 }}%</scaleLevel> bonus attack speed for {{ e8 }} seconds.<br /><br />Casting <span class="colorFFFFFF">Wolf's Frenzy</span> or vaulting inside of its effect reduces the cooldown of this spell to {{ e4 }} seconds.
+
+Kindred KindredW Undeclared vars: ['f3']
+Wolf claims a territory, attacking nearby enemies inside it for {{ e4 }} seconds. Lamb can redirect Wolf to new targets by attacking them. If Lamb leaves Wolf's territory he will cease attacking and join her.<br /><br />Wolf's attacks deal magic damage equal to {{ e5 }}<span class="colorFF8C00"> (+{{ a1 }})</span> plus <scaleLevel>{{ f3 }}%</scaleLevel> of the target's current health.<br /><br /><rules>Wolf attacks faster based on Kindred's attack speed. His attacks maim monsters for {{ e7 }}% increased damage and reduce their attack and movement speed by {{ e8 }}% for 2 seconds.</rules>
+
+Kindred KindredEWrapper Undeclared vars: ['f2', 'f3']
+Cripple an enemy, slowing their movement speed by {{ e2 }}% for {{ e8 }} second.<br /><br />After Lamb attacks the target twice, her third attack instead directs Wolf to pounce on the enemy, dealing {{ e1 }}<span class="colorFF8C00"> (+{{ a1 }})</span> plus <scaleLevel>{{ f2 }}%</scaleLevel> of the target's missing health as bonus physical damage.<br /><br />Wolf's attack critically strikes targets for {{ e6 }}% increased damage if they are below {{ e5 }}% <span class="colorFF5802">(+{{ f3 }}%)</span> health (Increased by <span class="colorFF5802">Critical Strike Chance</span>).<br /><br /><rules>[Maximum {{ e0 }} vs. monsters]</rules>
+
+Kled KledW Undeclared vars: ['f1']
+<span class="colorFF8C00">Passive:</span> When Kled basic attacks, he frenzies, gaining {{ e2 }}% attack speed for four attacks or {{ e6 }}seconds. Violent Tendencies then goes on cooldown.<br /><br />The fourth hit deals bonus physical damage equal to {{ e4 }} plus {{ e1 }}% <span class="colorFF8C00">(+{{ f1 }}%)</span> of the target's maximum health (maximum {{ e7 }} vs monsters).
+
+Kled KledR Undeclared vars: ['f5']
+Kled charges toward a location, leaving a trail that grants allies increasing movement speed. While charging, Kled gains a shield that increases over time to a maximum of {{ e4 }} <span class="colorFF8C00">(+{{ a1 }})</span> and lasts for 2 seconds after the charge ends.<br /><br />Skaarl rams the first enemy champion encountered, dealing up to {{ f5 }}% <span class="colorFF8C00">(+{{ f1*3 }}%)</span> of the target's maximum health as physical damage based on distance traveled.
+
+KogMaw KogMawBioArcaneBarrage Undeclared vars: ['f1']
+For {{ e3 }} seconds, Kog'Maw's basic attacks gain {{ e1 }} range and deal {{ e2 }}% <span class="color99FF99">(+{{ f1 }})%</span> of the target's maximum health as bonus magic damage.
+
+KogMaw KogMawLivingArtillery Undeclared vars: ['f2', 'f3', 'f4', 'f5', 'f6']
+Fires an artillery shot, damaging enemies above 40% health for {{ e1 }} <span class="colorFF8C00">(+{{ a2 }})</span> <span class="color99FF99">(+{{ a1 }})</span> to {{ effect1amount*1.5 }} <span class="colorFF8C00">(+{{ f3 }})</span> <span class="color99FF99">(+{{ f2 }})</span> magic damage based on their missing health.<br /><br />If enemies are below 40% health, they take {{ f4 }} <span class="colorFF8C00">(+{{ f6}})</span> <span class="color99FF99">(+{{ f5 }})</span> magic damage instead.<br /><br />Each subsequent shot within {{ e4 }} seconds costs{{ e3 }} more Mana (max {{ e5 }}).
+
+Leblanc LeblancR Undeclared vars: ['f1', 'f2']
+LeBlanc copies one of her spells and creates a <span class="colorCC00FF">Mimic</span> decoy to cast it with her. The <span class="colorCC00FF">Mimic</span> lasts {{ e7 }} seconds. <br /><br /><li>Shatter Orb deals {{ e3 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage.<br />Distortion deals {{ e5 }} <span class="color99FF99">(+{{ f1 }})</span> magic damage.<br />Ethereal Chains deals {{ e4 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage each time.<br />Using this spell on itself invokes <span class="colorDDDD77">Shadow of the Rose</span>.</li><br /><span class="colorDDDD77">Shadow of the Rose</span><br />The <span class="colorCC00FF">Mimic</span> appears at target location and approaches the closest visible enemy Champion, then casts a fake version of LeBlanc's most recent basic ability. <br /><br />Hasa separate <span class="colorFFFFFF">{{ f2 }} second</span> cooldown. This <span class="colorCC00FF">Mimic</span> lasts much longer but cannot be controlled.
+
+Lulu LuluQ Undeclared vars: ['f4', 'f5', 'f6']
+Lulu and Pix each fire a piercing bolt dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to the first enemy hit and {{ f4 }}<span class="color99FF99"> (+{{ f5 }})</span> to all additional enemies. Enemies hit are slowed by {{ e2 }}%, decaying over the next {{ e3 }} second(s).<br /><br />An enemy can only be damaged for up to a total of <span class="color99FF99">{{ f6 }}</span> damage per cast.
+
+Malphite Obduracy Undeclared vars: ['f1', 'f2', 'f3']
+<span class="colorFF9900">Passive: </span>Malphite's armor is increased by {{ e1 }}% (<span class="colorFFFF00">{{ f1 }}</span>). While Granite Shield is active, this bonus is tripled to {{ f4.0 }}% (<span class="colorFFFF00">{{ f3 }}</span>).<br /><br /><span class="colorFF9900">Active: </span>Basic attacks deal an additional {{ e2 }} <span class="colorFFFF00">(+{{ f2 }})</span> <span class="color99FF99">(+{{ a1 }})</span> physical damage to the target and nearby enemies. Lasts {{ e3 }} seconds.
+
+Malzahar MalzaharE Undeclared vars: ['f1']
+Deal {{ e1 }} <scaleAP>(+{{ a1 }})</scaleAP> magic damage to an enemy target over {{ e3 }} seconds. Applying Call of the Void or Nether Grasp to the victim during this time refreshes the visions.<br /><br />If the victim is killed, Malzahar gains <scaleMana>{{ f1 }}</scaleMana> Mana ({{ e5 }}% of max mana) and the visions spread to the nearest enemy.
+
+Maokai MaokaiE Undeclared vars: ['f1', 'f2']
+Maokai flings a sapling, which stands watch for {{ f1 }} seconds. Saplings will chase nearby enemies, detonating on proximity, dealing {{ e1 }} <span class="colorCC3300">+{{ e8 }}% <span class="color99FF99">[+{{ a1 }}%]</span> Target Max Health</span> magic damage and slowing enemies struck by {{ e5 }}% for {{ e6 }} seconds.<br /><br />Saplings placed in brush last for <span class="colorCC3300">{{ f2 }}</span> seconds and cause a larger explosion, dealing double damage over {{ e6 }} seconds to all enemies hit.<br /><br /><rules><span class="color8c8c8c">Maximum {{ e4 }} Damage to non-Champions, doubled for brush.</span></rules>
+
+MasterYi WujuStyle Undeclared vars: ['f1']
+<span class="colorFF9900">Passive:</span> Grants {{ e1 }}% <span class="colorFF8C00">({{ f1 }})</span> Attack Damage.<br /><br /><span class="colorFF9900">Active:</span> Basic attacks deal {{ e3 }} <span class="colorFF8C00">(+{{ f2 }})</span> bonus true damage for {{ e5 }} seconds. Afterwards the passive bonus is lost while Wuju Style is on cooldown.
+
+MissFortune MissFortuneRicochetShot Undeclared vars: ['f1']
+Miss Fortune fires a bouncing shot through an enemy, dealing {{ e2 }} <span class="colorFF8C00">(+{{ a2 }})</span> <span class="color99FF99">(+{{ a1 }})</span> physical damage to each target hit. Both apply on-hit effects.<br /><br />The second shot can critically strike for {{ f1 }}% damage, and it always critically strikes if the first shot kills its target.
+
+MissFortune MissFortuneViciousStrikes Undeclared vars: ['f2']
+<span class="colorFF9900">Passive:</span> After 5 seconds of not taking direct damage, Miss Fortune gains {{ e5 }} Movement Speed. After another 5 seconds, this bonus increases to {{ e2 }}.<br /><br /><span class="colorFF9900">Active:</span> Fully activates Strut's Movement Speed and grants {{ e1 }}% Attack Speed for {{ e3 }} seconds.<br /><br />Love Taps reduce the cooldown of Strut by {{ f2 }} seconds.
+
+MissFortune MissFortuneBulletTime Undeclared vars: ['f2', 'f3']
+Miss Fortune channels a barrage of bullets for {{ e3 }} seconds, dealing <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ a1 }})</span> physical damage per wave ({{ e2 }} waves total).<br /><br />Each wave of Bullet Time can critically strike for {{ f3}}% damage.<br /><br /><span class="colorF50F00">Total Damage: {{ f2 }}</span>
+
+Mordekaiser MordekaiserMaceOfSpades Undeclared vars: ['f3', 'f4', 'f5']
+Mordekaiser's next three hits are empowered. The first two strikes deal {{ e3 }} <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ f2 }})</span> bonus magic damage. The final strike deals {{ e9 }} times the bonus damage of the previous strikes, up to {{f5 }} <span class="colorFF8C00">(+{{ f3 }})</span> <span class="color99FF99">(+{{ f4 }})</span>.
+
+Mordekaiser MordekaiserCreepingDeathCast Undeclared vars: ['f3']
+<span class="size18 colorFF9900">Passive:</span> Mordekaiser gains bonus experience for killing minions near allied champions.<br /><br />Bonus Experience Earned: <span class="colorFFFFFF">{{ f3 }}</span><br /><br /><span class="size18 colorFF9900">Active:</span> Target an ally,linking them to Mordekaiser:<span class="size4"><br /><br /></span><li>Both gain up to {{ e5 }} movement speed toward one another.<span class="size8"><br /><br /></span>When they touch, they deal {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage over 4 seconds to nearby enemies.<span class="size8"><br /><br /></span>Reactivate to both instantly steal {{ e6 }} <span class="color99FF99">(+{{ a2 }})</span> health from nearby enemies ({{ e7 }}% heal on minions, max {{ e8 }} units; deals magic damage).
+
+Mordekaiser MordekaiserChildrenOfTheGrave Undeclared vars: ['f1', 'f2']
+<span class="size18 colorFF9900">Passive - Dragon Force:</span> Damaging the Dragon will <span class="size18 color53c653">Curse</span> it for 10 seconds.<br /><br /><span class="size18 colorFF9900">Active:</span> <span class="size18 color53c653">Curse</span> target Champion and steal {{ e1 }}% <span class="color99FF99">(+{{ a1 }}%)</span> of their maximum health (25% initially, 75% over 10 seconds; deals magic damage).<br /><br /><span class="size18 color53c653">Curse Effect:</span> When killed by Mordekaiser's team, the Cursed unit's soul will follow Mordekaiser for {{ e9 }} seconds. Mordekaiser gains {{ e7 }}% of their ability power and {{ e8 }}% of their bonus health. The ghost gains <span class="colorFF8C00">(+{{ f1 }})</span> attack damage and <span class="colorCC3300">(+{{ f2 }})</span> health.<br /><br /><span class="color53c653">The ghost can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.</span>
+
+Nami NamiW Undeclared vars: ['f1']
+Unleashes a stream of water that bounces back and forth between allied and enemy champions.<br /><br /><span class="colorCCFF99">On Ally Hit: </span>Heals {{ e3 }} <span class="color99FF99">(+{{ a2 }})</span> Health and will bounce to a nearby enemy champion.<br /><br /><span class="colorFF9999">On Enemy Hit: </span>Deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and bounces to a nearby allied champion.<br /><br />Bounces to each target only once, and hits up to {{ e2 }} targets. The damage and healing value is modified by <spanclass="color99FF99">({{ f1 }}%)</span> each bounce.
+
+Nidalee Bushwhack Undeclared vars: ['f4']
+<span class="size18 colorFF9900">Human: </span>Nidalee places an invisible trap that lasts for 2 minutes. The trap triggers when an enemy walks over it, revealing the victim and bleeding them for {{ e7 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage over 4 seconds.<br /><br /><span class="colorFFFFFF">{{ f4 }}</span> traps may be active at once. (Maximum traps increases at level 6, 11 and 16)<br /><br /><span class="size18 colorFF9900">Cougar: </span>Nidalee lunges in target direction, dealing damage to nearby enemies.
+
+Nidalee PrimalSurge Undeclared vars: ['f3']
+<span class="size18 colorFF9900">Human: </span>Nidalee heals target ally champion for {{ e1 }} <span class="color99FF99">(+{{ a2 }})</span>to {{ e2 }} <span class="color99FF99">(+{{ f3 }})</span> based on their missing health and grants them {{ e4 }}% Attack Speed for 7 seconds.<br /><br /><span class="size18 colorFF9900">Cougar: </span>Nidalee claws at enemies in target direction.
+
+Nunu Consume Undeclared vars: ['f5']
+Nunu commands the yeti to take a bite out of a minion or monster, dealing {{ e1 }} true damage and healing himself for {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span>.<br /><br /><span class="colorFF9900">Passive -</span><span class="color33FF33"> Feed The Yeti</span>: Forevery Large or Epic Monster the yeti bites, Nunu gains {{ e4 }} <scaleAP>(+{{ a2 }})</scaleAP> magic damage on hit, {{ e0 }}% Maximum Health, increased size, and {{ e9 }} out of combat Movement Speed for the next <span class="colorFFFFFF">{{ f5 }}</span> seconds (max {{ e6 }} stacks).<br /><br /><span class="colorDDDD77">Recently Consumed monsters will not grant additional bonuses ({{ e5 }} second cooldown).</span>
+
+Nunu AbsoluteZero Undeclared vars: ['f2']
+Nunu channels for {{ e4 }} seconds, sapping the area of heat. Nearby enemies have their Movement Speed slowed by {{ e2 }}% and their AttackSpeed slowed by {{ e3 }}%. The Movement Speed slow increases to {{ e6 }}% over the duration of the channel.<br /><br />Enemies caught in the area when the channel ends take up to {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage, depending on how long Absolute Zero was channeled.<br />(Minimum Damage: <span class="color99FF99">{{ f2 }}</span>)
+
+Olaf OlafRagnarok Undeclared vars: ['f1']
+<span class="colorFF9900">Passive: </span>Olaf gains {{ e1 }} Armor and {{ e1 }} Magic Resist.<br /><br /><span class="colorFF9900">Active:</span>Olaf removes all disables from himself and becomes immune to them for the next {{ e2 }} seconds. Olaf also receives a {{ e5 }}% Movement Speed bonus towards enemy champions for {{ e4 }} second. During this time, Olaf loses the passive portion of Ragnarok and gains <span class="colorFF8C00">{{ f1 }}</span> Attack Damage ({{ e6 }} + {{ e3 }}% of his Total Attack Damage).
+
+Ornn OrnnW Undeclared vars: ['f5', 'f8', 'f9']
+Ornn stomps forwards, breathing fire and shielding himself for <span class="colorCC3300">{{ f5 }}</span> (12% max health) for {{ e5 }} seconds. The fire deals up to {{ e0 }}% of the enemy's max health as magic damage (minimum {{ e3 }}).<br /><br />Enemies hit by the final gout of flame become <span class="colorFF5733">Brittle</span> for {{ f9 }} seconds. The next immobilizing effect against a Brittle enemy has its duration increased by 30% and deals <span class="colorFFFFFF">{{ f8 }}</span>% of their max health as magic damage.<br /><br /><span class="size16 color8C8C8C">Ornn's basic attacks knock back Brittle targets.</span>
+
+Ornn OrnnE Undeclared vars: ['f2', 'f3']
+Ornn charges, dealing {{ e1 }} <span class="colorFFFF00">(+{{ f2 }})</span><span class="colorFF00FF">(+{{ f3 }})</span> physical damage to enemies hit.<br /><br />If Ornn rams into terrain, he creates a shockwave that knocks up enemies for {{ e6 }} second and applies Searing Charge's damage to those not hit by the charge.<br /><br /><span class="size16 color8C8C8C">The shockwave destroys magma pillars and terrain created by enemy champions.</span>
+
+Ornn OrnnR Undeclared vars: ['f10', 'f4']
+Ornn summons a massive lava elemental which stampedes toward him. Enemies run over by the elemental take {{ e2 }} <span class="color99FF99">(+{{ f4 }})</span> magic damage, are slowed by {{ e5 }}% for {{ e6 }} seconds and become <span class="colorFF5733">Brittle</span> for {{ f10 }} seconds.<br /><br />Ornn can recast this ability to smash into the elemental to redirect and empower it. The empowered elemental knocksup enemies for 1.5 seconds, deals {{ e2 }} <span class="color99FF99">(+{{ f4 }})</span> magic damage and applies <span class="colorFF5733">Brittle</span>.
+
+Poppy PoppyW Undeclared vars: ['f1', 'f2']
+<span class="colorFF9900">Passive:</span> Poppy gains <span class="colorFFFF00">{{ f1 }}</span> Armor and <span class="colorFF00FF">{{ f2 }}</span> Magic Resist ({{ e3 }}% of Armor and Magic Resist). This bonus is doubled if Poppy is below 40% Health.<br /><br /><span class="colorFF9900">Active:</span> For the next {{ e1 }} seconds, Poppy gains {{ e2 }}% Movement Speed. While Steadfast Presence is active, she stops enemy dashes in an area around her, dealing {{ e5 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.
+
+Quinn QuinnQ Undeclared vars: ['f2']
+Valor flies in a line, marking the first enemy he hits as <span class="colorFFF673">Vulnerable</span> and reducing its vision radius dramatically for {{ e3 }} seconds. He then deals {{ e1 }} <scaleAD>(+{{ f2 }})</scaleAD> <scaleAP>(+{{ a1 }})</scaleAP> physical damage to all nearby enemies.<br /><br />If the primary target is not a champion, it cannot attack for {{ e3 }} seconds.
+
+Rakan RakanQ Undeclared vars: ['f1']
+Flings a magical feather that deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to the first enemy hit.<br /><br />If the feather hits a champion or epic monster, Rakan restores <span class="colorFFFFFF">{{ f1 }}</span> <span class="color99FF99">(+{{ a2 }})</span> health to himself and nearby allies after {{ e4 }} seconds or when he touches an ally.
+
+Rammus PowerBall Undeclared vars: ['f2']
+Rammus accelerates in a ball, gaining up to <span class="colorFFFFFF">{{ f2 }}%</span> Movement Speed over {{ e4 }} seconds. On enemy collision, he stops, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to nearby enemies, knocking them back, and slowing them by {{ e2 }}% for {{ e3 }} second.<br /><br /><rules><span class="color8c8c8c">Can be reactivated to end the effect early and put Powerball on cooldown.<br />Powerball is a channeled spell and is subject to interruption by spells that prevent casting.<br />Casting Powerballcancels Defensive Ball Curl and puts it on cooldown.</span></rules>
+
+Rammus DefensiveBallCurl Undeclared vars: ['f2']
+Rammus enters a defensive formation for up to {{ e3 }} seconds, increasing Armor by {{ e1 }} plus {{ e6 }}% <span class="colorFFFF00">({{ f1 }})</span> and Magic Resist by {{ e8 }} plus {{ e7 }}% <span class="colorFF00FF">({{ f2 }})</span> but becoming slowed by {{ e5 }}%.<br /><br />During this time, Spiked Shell deals {{ e4 }}% damage and also deals its damage to enemies that basic attack Rammus.<br /><br /><rules><span class="color8c8c8c">Can be reactivated to end the effect early and put Defensive Ball Curl on cooldown.<br />Casting Defensive Ball Curl cancels Powerball and puts it on cooldown.</span></rules>
+
+RekSai RekSaiW Undeclared vars: ['f1']
+<span class="colorFF8C00">Un-Burrowed:</span> Burrow into the ground. <br /><br /><span class="colorFF8C00">Burrowed:</span> Un-burrow, dealing {{ e2 }} <span class="colorFF8C00">(+{{ a1 }})</span> Physical Damage and knocking up the closest enemy for {{ e5 }} second. All other nearby enemies will be knocked back. An enemy who has been knocked up will be immune from further Un-burrow effects for {{ e6 }} seconds.<br/><br /><span class="colorFF8C00">Burrowed Effects:</span> New abilities, <span class="colorFFFFFF">+{{ f1 }}</span> Movement Speed, reduced vision range, disabled basic attacks, and gains <span class="color993299">Tremor Sense:</span> Nearby enemies that move in Fog of War havetheir position revealed to Rek'Sai and her allies.
+
+RekSai RekSaiE Undeclared vars: ['f2']
+<span class="colorFF8C00">Un-Burrowed:</span> Rek'Sai bites a target dealing {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> PhysicalDamage. At max Fury, the bite does 100% more and deals True Damage.<br /><br />Maximum Damage: <span class="colorFFFFFF">{{ f2 }}</span><br/><br /><span class="colorFF8C00">Burrowed:</span> Rek'Sai tunnels forward leaving two connected <span class="color993299">Tunnel Entrances</span>. Clicking a <span class="color993299">Tunnel Entrance</span> will make Rek'Sai dive to the other entrance.<br /><br /><span class="color993299">Tunnel Entrances</span> last for {{ e5 }} minutes and can be destroyed by enemies. Rek'Sai may have {{ e6 }} tunnels at one time. Tunnels have a {{ e8 }} second cooldown on use.
+
+Renekton RenektonCleave Undeclared vars: ['f3', 'f4', 'f5', 'f6']
+Renekton swings his blade, dealing {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage to nearby enemies and healing himself for {{ e2 }} <span class="colorFF8C00">(+{{ f1 }})</span> Health for each non-champion hit and {{ f2 }} <span class="colorFF8C00">(+{{ f3 }})</span> Health for each champion hit, up to {{ e4 }} Health.<br /><br />He generates <span class="colorFF6633">2.5 Fury</span> for eachnon-champion hit and <span class="colorFF6633">10 Fury</span> for each champion hit, up to a maximum of <span class="colorFF6633">30 Fury</span>.<br /><br /><span class="colorFF6633">50 Fury Bonus:</span> Damage increased to {{ e6 }} <span class="colorFF8C00">(+{{ a2 }})</span>.Heal increased to {{ e7 }} <span class="colorFF8C00">(+{{ f4 }})</span> per non-champion and {{ f5 }} <span class="colorFF8C00">(+{{ f6 }})</span> per champion, up to {{ e9 }}. No longer generates <span class="colorFF6633">Fury</span>.
+
+Renekton RenektonPreExecute Undeclared vars: ['f3']
+Renekton's next attack strikes twice, stunning his target for {{ e3 }} seconds and dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage per hit ({{ e5 }} <span class="colorFF8C00">(+{{ f2 }})</span> total).<br /><br />Each strike applies on-hit effects and generates <span class="colorFF6633">Fury</span>. Hitting a champion generates an additional <span class="colorFF6633">{{ e7 }} Fury</span>.<br /><br /><span class="colorFF6633">50 Fury Bonus:</span> Renekton attacks three times, stunning his target for {{ e4 }} seconds and dealing a total of {{ e6 }} <span class="colorFF8C00">(+{{ f3 }})</span> damage.  No longer generates <span class="colorFF6633">Fury</span>.
+
+Rengar RengarQ Undeclared vars: ['f2', 'f3', 'f4']
+Rengar gains {{ e5 }}% Attack Speed for his next 2 attacks. The first attack deals {{ e1 }} <span class="colorF88017">(+{{ f2 }})</span> physical damage.<br /><br /><span class="colorEDDA74">Ferocity effect:</span><br />Savagery's damage is increased to <span class="colorFFFFFF">{{ f3 }}</span> <span class="colorFF8C00">(+{{ a2 }})</span> and grants Rengar <span class="colorFFFFFF">{{ f4 }}</span>% Attack Speed for {{ e3 }} seconds.
+
+Rengar RengarW Undeclared vars: ['f1']
+Deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to nearby enemies and heals Rengar for {{ e2 }}% of the damage he took in the last {{ e3 }} seconds.<br /><br /><span class="colorEDDA74">Ferocity effect: </span><br />Deals <span class="colorFFFFFF">{{ f1 }}</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage and removes existing crowd control effects, in addition to its normal effect.<br /><br /><rules><span class="color8c8c8c">Damage healed from monster attacks is increased by {{ e5 }}%.</span></rules>
+
+Rengar RengarE Undeclared vars: ['f1']
+Throw a bola, dealing {{ e1 }}<span class="colorF88017"> (+{{ a1 }})</span> physical damage and slowing the first enemy hit by {{ e2 }}% for {{ e3 }} seconds.<br /><br /><span class="colorEDDA74">Ferocity effect:</span><br />Deals <span class="colorFFFFFF">{{ f1 }}</span> <span class="colorF88017">(+{{ a1 }})</span> physical damage and roots the target for {{ e4 }} seconds.
+
+Ryze RyzeQWrapper Undeclared vars: ['f1', 'f2', 'f3']
+<span class="colorFF9900">Passive:</span> Rune Prison and Spell Flux reset Overload's cooldown and charge a <span class="colorFFF673">Rune</span> for {{ e2 }} seconds, up to {{ e9 }} <span class="colorFFF673">Runes</span>.<br /><br /><span class="colorFF9900">Active:</span> Unleash a runic blast, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="color44DDFF">(+{{ f1 }})</span> magic damage to the first enemy struck. Any active <span class="colorFFF673">Runes</span> are discharged.<br /><br />If {{ e9 }} <span class="colorFFF673">Runes</span> are discharged, they Overload, shielding Ryze from <span class="colorFFFFFF">{{ f3 }}</span> <span class="color99FF99">(+{{ a2}})</span> <span class="color44DDFF">(+{{ f2 }})</span> damage and increasing his Movement Speed by {{ e4 }}% for {{ e5 }} seconds.
+
+Ryze RyzeW Undeclared vars: ['f1']
+Instantly root an enemy for {{ e1 }} second and deal {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="color44DDFF">(+{{ f1 }})</span> magic damage.
+
+Ryze RyzeE Undeclared vars: ['f1']
+Apply Flux to an enemy, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="color44DDFF">(+{{ f1 }})</span> magic damage. Spells consume Flux for bonus effects:<br /><br /><span class="colorFFF673">Overload:</span> Deals {{ e2 }}% more damage and spreads to nearby enemies with Flux.<br /><span class="colorFFF673">Rune Prison:</span> Root duration is increased to {{ e6 }} seconds.<br /><span class="colorFFF673">Spell Flux:</span> Spreads Spell Flux to nearby enemies, dealing {{ e8 }}% damage.<br /><br /><i>Spells that kill enemies affected by Flux spread Spell Flux to nearby enemies.
+
+Sejuani SejuaniW Undeclared vars: ['f1', 'f2']
+Sejuani swings her flail, dealing {{ e1 }} <span class="colorFF3300">(+{{ f1 }})</span> physical damage and applying <span class="color07F2F1">Frost</span> to enemies hit and knocking minions and monsters back.<br /><br />She then lashes out with her flail, dealing {{ e3 }} <span class="colorFF3300">(+{{ f2 }})</span> physical damage, applying <span class="color07F2F1">Frost</span> and slowing enemies hit briefly.
+
+Sejuani SejuaniE Undeclared vars: ['f2']
+<span class="colorFF9900">Passive:</span> Nearby melee allied champions' basic attacks apply <span class="color07F2F1">Frost</span> to enemy champions and large monsters.<br /><br /><span class="colorFF9900">Active:</span> Target enemy with 4 stacks of <span class="color07F2F1">Frost</span> takes {{ e3 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage, is stunned for {{ e1 }} second(s), and is briefly displaced.<br /><br /><span class="size16 color8C8C8C">An enemy stunned by Sejuani cannot gain </span><span class="size16 color07F2F1">Frost</span><span class="size16 color8C8C8C"> for {{ f2 }} seconds.</span>
+
+Shaco Deceive Undeclared vars: ['f3']
+Shaco teleports nearby and becomes <span class="color91d7ee">Invisible</span> for {{ e3 }} seconds. Shaco remains <span class="color91d7ee">Invisible</span> even if he uses Jack in the Box or Hallucinate. <br /><br />His next basic attack during or shortly after <span class="color91d7ee">Invisibility</span> will reduce Deceive's cooldown by {{ f3 }} seconds. <br /><br /><u><span class="size16 color91d7ee">Stealth - Invisible</span></u><span class="size16 colorb3b3b3">: Shaco can only be revealed by nearby enemy Turrets or <span class="size16 coloree91d7">True Sight</span>.
+
+Shen ShenQ Undeclared vars: ['f1', 'f2']
+Shen recalls his <span class="colorBB77FF">spirit blade</span> and draws it. Enemies it collides with are slowed by {{ e4 }}% when moving away from Shen for the next {{ e5 }} seconds.<br /><br />Shen's next {{ e3 }} attacks deal <scaleLevel>{{ f1 }}</scaleLevel> plus {{ e2 }} <span class="color99FF99">(+{{ charabilitypower*.01 }})</span>% of their target's max health as bonus magic damage. If the <span class="colorBB77FF">spirit blade</span> collided with an enemy champion, those attacks deal <scaleLevel>{{ f2 }}</scaleLevel> plus {{ e6 }} <span class="color99FF99">(+{{ charabilitypower2*.01 }})</span>% instead and have +{{ e9 }}% Attack Speed.<br /><br /><rules>Each attack deals {{ e1 }}% increased damage to monsters (capped at {{ e7 }}).</rules>
+
+Shen ShenE Undeclared vars: ['f1', 'f2']
+<span class="colorFF9900">Passive:</span> Dealing damage with Shadow Dash or Twilight Assault recovers <span class="colorFFFFFF">{{ f1 }}</span> Energy.<br /><br /><span class="colorFF9900">Active:</span> Shen dashes in a direction, dealing {{ e2 }} <span class="colorCC3300">[+{{ f2 }}]</span> physical damage to enemy champions and neutral monsters in his path and taunting them for {{ e1 }} seconds.
+
+Shen ShenR Undeclared vars: ['f1', 'f2']
+Shen grants a shield to a target allied champion that lasts {{ e2 }} seconds and absorbs up to {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> to {{ e8 }} <span class="color99FF99">(+{{ f2 }})</span> damage based on their missing health. After channeling for {{ f1 }} seconds, Shen and his <span class="colorBB77FF">spirit blade</span> teleport to the ally's location.
+
+Shyvana ShyvanaDoubleAttack Undeclared vars: ['f2']
+Shyvana strikes twice on her next attack, dealing <span class="colorFF8C00">{{ f2 }}</span> and <span class="colorFF8C00">{{ f1 }}</span> physical damage on the first and second hits respectively.<br /><br />While Twin Bite is on cooldown, basic attacks reduce the remaining cooldown duration by {{ e3 }} seconds.<br /><br /><span class="colorFF3300">Dragon Form: </span>Twin Bite cleaves all units in front Shyvana.<br/><br /><span class="color919191"><i>Twin Bite's second hit damage is equal to {{ e1 }}% of Shyvana's attack damage.</i></span>
+
+Shyvana ShyvanaFireball Undeclared vars: ['f1', 'f2', 'f3', 'f4', 'f5', 'f6']
+Shyvana unleashes a fireball that stops after hitting a champion. All enemies hit take {{ e1 }} <span class="colorFF8C00">(+{{ f4 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage and are marked for {{ e2 }} seconds.<br /><br />Shyvana's basic attacks against marked targets deal {{ e4 }}% of their maximum health as magic damage on hit.<br /><br /><span class="colorFF3300">Dragon Form: </span>FlameBreath explodes on impact or at target location, dealing <span class="colorFFFFFF">{{ f1 }}</span> <span class="colorFF8C00">(+{{ f5 }})</span> <span class="color99FF99">(+{{ a1 }})</span> bonus magic damage and scorching the earth for 4 seconds. Enemies on scorched earth take <span class="colorFFFFFF">{{ f3 }}</span> <span class="colorFF8C00">(+{{ f6 }})</span> <span class="color99FF99">(+{{ f2 }})</span> magic damage per second.<br /><br /><span class="color919191"><i>Flame Breath's on-hit damage against monsters is capped at {{ e3 }} damage per hit.</i></span>
+
+Sion SionW Undeclared vars: ['f2']
+<span class="colorFFE076">Passive:</span> Sion gains {{ e5 }} maximum Health when he kills a unit ({{ e6 }} for champion kills, assists, large minions and large monsters). <span class="colorFF3300">Current Bonus: {{ f1 }} </span><br /><br /><span class="colorFFE076">Active:</span> Sion shields himself for {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorFF3300">(+{{ f2 }})</span> ({{ e3 }}% ofmaximum Health) for 6 seconds. After {{ e7 }} seconds, while the shield holds, Sion can reactivate to deal {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> plus {{ e4 }}% of the target's maximum Health as magic damage to nearby enemies. Max 400 bonus damage to minions and monsters.
+
+Skarner SkarnerExoskeleton Undeclared vars: ['f1']
+Skarner is shielded for <span class="colorCC3300">{{ f1 }}</span> ({{ e1 }}% of his maximum health) <span class="color99FF99">(+{{ a1 }})</span> damage for {{ e4 }} seconds. While the shield persists, Skarner gains movement speed that ramps up to {{ e5 }}% over 3 seconds.
+
+Soraka SorakaQ Undeclared vars: ['f1']
+Calls down a star from Soraka to a target location. Enemies standing in the explosion radius take {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and are slowed by {{ e2 }}% for 2 seconds.<br /><br />If Starcall hits a champion Soraka gains <span class="colorDDDDDD">Rejuvenation</span> for {{ e5 }} seconds, which restores {{ e3 }} <span class="color99FF99">(+{{ f1 }})</span> health per second and grants {{ e9 }}% movement speed when not moving toward enemy champions.
+
+Soraka SorakaW Undeclared vars: ['f1']
+Restores {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> health to another champion ally.<br /><br />If cast while affected by <span class="colorDDDDDD">Rejuvenation</span>, Soraka will grant her target its benefits for {{ f1 }} seconds.<br /><br /><span class="color919191"><i>Cannot be cast if Soraka is below 5% Health.</i></span>
+
+Swain SwainQ Undeclared vars: ['f1', 'f2']
+Swain unleashes {{ e5 }} bolts of eldritch power that strike the first enemy they hit and pierce through enemies they kill. Enemies hit take {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage, plus {{ e2 }}% per additional bolt. Max Damage: {{ f2 }}.<br /><br />Each unit killed by Death's Hand restores <span class="color44DDFF">{{ f1 }}</span> Mana ({{ e4 }}% max mana).
+
+Swain SwainR Undeclared vars: ['f1', 'f2', 'f3', 'f7']
+Swain frees the demon within for {{ e3 }} seconds, gaining {{ e6 }} health. Every second, he drains the 3 closest enemy champions for {{ e1}} <span class="color99FF99">(+{{ a1 }})</span> magic damage, healing him for {{ e4 }} <span class="color99FF99">(+{{ a2 }})</span> health.After draining <scaleLevel>{{ f7 }}</scaleLevel> health, Swain gains the ability to cast Demonflare.<br /><br /><span class="colorDDDD77">Demonflare:</span> Swain unleashes a nova of soulfire dealing magic damage and ending his transformation. Damage per <span class="size18 colorFF3F3F">Soul Fragment</span>: {{ e0 }} <span class="color99FF99">(+{{ f1 }})</span>.<br /><br />Current Damage: {{ f3 }}<br />Max Damage: {{ f2 }}<br /><br /><rules>Swain can drain non-champions to heal for {{ e7 }}% of the normal amount.
+
+Syndra SyndraQ Undeclared vars: ['f1']
+Conjures a Dark Sphere dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage. The sphere remains for <span class="colorFFFFFF">{{ f1 }}</span> seconds and can be manipulated by Syndra's other abilities.<br /><br /><span class="color99FF99">This spell can be cast while moving.</span>
+
+Taliyah TaliyahQ Undeclared vars: ['f1', 'f2']
+Hurls 5 rocks in a direction, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage in a small area around the first enemy hit. Subsequent hits on the same unit deal {{ e2 }}% reduced damage. Creates <span class="colora56705">Worked Ground</span> for <span class="colorFFFFFF">{{ f1 }}</span> seconds.<br /><br />Taliyah gains <span class="colorffffff">{{ f2 }}%</span> movement speed on <span class="colora56705">Worked Ground</span>. Casting Threaded Volley on <span class="colora56705">Worked Ground</span> only hurls one rock but refunds {{ e7 }}% of its mana cost.
+
+Taliyah TaliyahE Undeclared vars: ['f1', 'f2', 'f3', 'f4']
+Places a field of dash-sensitive traps that deal {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and slow enemies in thearea by <span class="color99FF99">{{ f2 }}%</span>. After {{ e3 }} seconds, the traps explode, dealing damage again.<br /><br />Enemies <span class="colorFFFFFF">dashing</span>, being <span class="colorFFFFFF">pushed</span>, or being <span class="colorFFFFFF">pulled</span> through Unraveled Earth will trigger traps, taking {{ f3 }} <span class="color99FF99">(+{{ f1 }})</span> magic damage from each trap (maximum 4, each hit after the first deals {{ f4 }}% less damage).
+
+Talon TalonQ Undeclared vars: ['f2', 'f3', 'f4']
+Talon leaps to target and deals {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage. If cast from melee range, Talon doesnot leap but instead critically strikes, dealing {{ f2 }}% damage <span class="colorFF8C00">({{ f3 }})</span>.<br /><br />When Noxian Diplomacy kills a unit, Talon regains <span class="colorFFFFFF">{{ f4 }}</span> health and refunds {{ e5 }}% of its cooldown.
+
+Talon TalonW Undeclared vars: ['f1']
+Talon tosses a volley of blades, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage to units hit and returning to him after a delay.<br /><br />On their way back to Talon, the blades deal {{ e5 }} <span class="colorFF8C00">(+{{ a2 }})</span> additionaldamage and slow the enemy by {{ e2 }}% for 1 second.
+
+Talon TalonE Undeclared vars: ['f2', 'f3']
+Talon vaults up to {{ f2 }} units over the nearest structure or terrain in the target direction. The vault's speed is affected by Talon's movement speed.<br /><br />Talon cannot dash over the same section of terrain more than once every <span class="colorFFFFFF">{{ f3 }}</span> seconds.
+
+Taric TaricQ Undeclared vars: ['f1', 'f2', 'f3']
+Spends all charges to heal nearby allied champions for {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorFF3300">(+{{f1 }})</span> ({{ e2 }}% of maximum Health) per charge, up to {{ e5 }} <span class="color99FF99">(+{{ f3 }})</span> <span class="colorFF3300">(+{{ f2 }})</span> at maximum charges.<br />Maximum charges: {{ e6 }}<br /><br />Bravado-empowered attacks grant 1 charge of Starlight's Touch.
+
+Taric TaricW Undeclared vars: ['f1']
+Taric's spells will also cast from a nearby ally protected by Bastion.<br /><br /><span class="colorFF9900">Passive: </span>Bastion increases Armor by <span class="colorFFFF00">{{ f1 }}</span> ({{ e1 }}% of Taric's Armor).<br /><br /><span class="colorFF9900">Active: </span>Blesses an ally with Bastion and shields them for {{ e2 }}% of their maximum Health for {{ e3 }} seconds. Bastion lasts on the target until a new one is chosen.
+
+Taric TaricE Undeclared vars: ['f1']
+Readies a beam of starlight that, after {{ e3 }} second, deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorFFFF00">(+{{ f1 }})</span> magic damage and stuns enemies for {{ e2 }} second(s).
+
+Teemo TeemoRCast Undeclared vars: ['f1']
+Tosses a stored mushroom as a trap that detonates if an enemy steps on it, spreading poison to nearby enemies that slows Movement Speed by {{ e2 }}%, reveals them and deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage over {{ e9 }} seconds. <br /><br />Traps last {{ e5 }} minutes and take {{ e4 }} second to arm and stealth. If a thrown trap lands on another trap, it will bounce up to <span class="colorFFFF99">{{ e6 }}</span> Teemos further before planting.<br /><br />Teemo forages for a mushroom every <span class="colorFFFFFF">{{ f1 }}</span> seconds, but he is only big enough to carry 3 at once.
+
+Thresh ThreshW Undeclared vars: ['f6']
+Thresh throws the Lantern to a target location. If an ally clicks on it Thresh will pull both the Lantern and his ally to him.<br /><br />The Lantern grants a shield lasting {{ e5 }} seconds that absorbs up to {{ e1 }} <span class="color0bf7de">(+{{ f6 }})</span> damage to Thresh and up to one ally if they come near it. The shield amount scales with the number of <span class="color0bf7de">souls</span> Thresh has collected.
+
+Thresh ThreshE Undeclared vars: ['f2', 'f3']
+<span class="colorFF9900">Passive: </span>Thresh's basic attacks deal from <span class="color0bf7de">{{ f3 }}</span> to <span class="color0bf7de">{{ f3 }}</span> <span class="colorFF8C00">(+{{ f2 }})</span> additional magic damage, which builds up while not attacking (total <span class="color0bf7de">souls</span> collected plus up to {{ e3 }}% total Attack Damage).<br /><br /><span class="colorFF9900">Active: </span>Deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage in a line beginning behind Thresh. Enemies hit are pushed in the direction of the swing, then slowed by {{ e2 }}% for {{ e4 }} second.<br /><br />Cast forward to push; cast backward to pull.
+
+Tristana TristanaE Undeclared vars: ['f1']
+<span class="colorFF9900">Passive: </span>Enemies explode when slain by Tristana's basic attacks, dealing {{ e1 }} <span class="color99FF99">(+{{ a2 }})</span> Magic Damage to nearby enemies.<br /><br /><span class="colorFF9900">Active: </span>Places a bomb on an enemy or turretthat explodes after 4 seconds, dealing {{ e4 }} <span class="colorFF8C00">(+{{ f1 }})</span> <span class="color99FF99">(+{{ a1 }})</span> Physical Damage. Each attack and ability charges the bomb's damage by +{{ e6 }}%.<br /><br />At 4 charges, the bomb explodes immediately. Thedetonation radius is twice as large if used on a turret.
+
+Tryndamere TryndamereQ Undeclared vars: ['f2']
+<spellPassive>Passive:</spellPassive> Tryndamere thirsts for blood, gaining {{ e1 }} Attack Damage plus {{ e2 }} per 1% Health missing.<br /><br /><spellActive>Active:</spellActive> Tryndamere consumes his Fury, restoring {{ e3 }} <scaleAP>(+{{ a1 }})</scaleAP> Health, plus {{ e4 }} <scaleAP>(+{{ f2 }})</scaleAP> Health per Fury consumed.
+
+Twitch TwitchExpunge Undeclared vars: ['f1', 'f2']
+Deals {{ e2 }} physical damage plus {{ e1 }}<span class="color99FF99"> (+{{ a1 }})</span> <span class="colorFF8C00">(+{{ f1 }})</span> per stack of <span class="color3ca126">Deadly Venom</span> to all nearby enemies affected by <span class="color3ca126">Deadly Venom.</span> <span class="colora3554e">(Max Stack Damage: {{ f2 }})</span>
+
+Udyr UdyrTurtleStance Undeclared vars: ['f1']
+<span class="colorFF9900">Persistent Effect: </span>Udyr's first attack and every third attack after heals him for <span class="colorFF3300">(+{{ f1 }})</span> ({{ e3 }}% of his maximum health), increasing by 1% for every percent of Udyr's missing health.<br /><br /><span class="colorFF9900">Activation: </span>Gains a shield that absorbs {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> damage for {{ e2 }} seconds.<br /><br /><rules><span class="color8c8c8c">Udyr's stance mana costs decrease by 1 each time he levels up.</span></rules>
+
+Urgot UrgotW Undeclared vars: ['f2', 'f3']
+For {{ e3 }} seconds, Urgot shoots at a nearby enemy {{ e8 }} times a second, dealing {{ e9 }} <span class="colorFF8C00">(+{{ f3 }})</span>physical damage per shot, <span class="colorFFEB7F">locking onto</span> champions recently damaged by his other abilities. He also shields himself, absorbing {{ e1 }} <span class="colorCC3300">(+{{ f2 }})</span> damage.<br /><br />While firing, Urgot loses {{ e5 }} movement speed but has {{ e2 }}% slow resistance and can walk over minions and non-epic monsters.<br /><br /><rules><span class="color8c8c8c">Applies on-hits at 33% damage. Cannot critically strike. Minimum of {{ e0 }} damage to minions.</span></rules>
+
+Vi ViQ Undeclared vars: ['f2']
+Charges a powerful punch that carries Vi forward.<br /><br /><span class="colorFF9900">First Cast:</span> Slows Movement Speed by {{ e4 }}%while increasing damage and dash range over 1.25 seconds.<br /><br /><span class="colorFF9900">Second Cast:</span> Dashes forward dealing {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> to {{ f2 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage and applying Denting Blows to all enemies hit (deals {{ e3 }}% damage to minions and monsters). Stops upon colliding with an enemy champion, knocking it back.
+
+Viktor ViktorPowerTransfer Undeclared vars: ['f1', 'f2']
+Viktor blasts an enemy unit, dealing {{ e1 }}<span class="color99FF99"> (+{{ a1 }})</span> magic damage while granting Viktor a shield thatabsorbs up to <span class="color44DDFF">{{ f1 }}</span> <span class="color99FF99">(+{{ f2 }})</span> damage over the next {{ e2 }} seconds.<br /><br />Viktor's next basic attack deals {{ e5 }}<span class="color99FF99"> (+{{ a2 }})</span> bonus magic damage.<br /><br /><span class="colorFFCC00">Augment - Turbocharge:</span> Siphon Power's shield is increased by 60% and Viktor gains {{ e3 }}% Movement Speed for {{ e2 }} seconds.
+
+Vladimir VladimirQ Undeclared vars: ['f6', 'f7']
+Vladimir drains the lifeforce of his target, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and healing himselffor {{ e2 }}<span class="color99ff99"> (+{{ a2 }})</span> health. After casting Transfusion twice, Vladimir gains <span class="colorFFB3B3">Crimson Rush</span> the next time it becomes available to cast.<br /><br /><span class="colorFFB3B3">Crimson Rush:</span> Vladimir is briefly hasted and for the next {{ e8 }} seconds Transfusion deals {{ e7 }}% increased damage and heals for an additional <span class="colorFFFFFF">{{ f7 }}</span> plus {{ e5 }}% <span class="color99FF99">(+{{ f6 }}%)</span> of his missing health (empowered heal has {{ e9 }}% effectiveness against minions).
+
+Vladimir VladimirE Undeclared vars: ['f2', 'f3', 'f4']
+<span class="colorFF9900">First Cast: </span>Vladimir charges up a reservoir of blood, spending up to <span class="colorCC3300">{{ e2 }}% of his max Health ({{ f3 }})</span> to increase this spell's damage. While at full charge, Vladimir is slowed.<br /><br /><span class="colorFF9900">Second Cast: </span>Vladimir unleashes a nova of blood at surrounding enemies which deals between {{ e3 }}<span class="colorCC3300"> (+{{ f2 }})</span><span class="color99FF99"> (+{{ a1 }})</span> and {{ e0 }}<span class="colorCC3300"> (+{{ f4 }})</span><span class="color99FF99"> (+{{ a2 }})</span> magic damage and, at full charge, briefly slows by {{ e9 }}%. Targets hit block a portion of the nova.<br /><br />Tides of Blood will release automatically if held for more than {{ e7 }} seconds.
+
+Vladimir VladimirHemoplague Undeclared vars: ['f3', 'f4']
+Vladimir infects enemies in a target area with a virulent plague, causing them to take {{ e2 }}% increased damage from all sources for {{ e4 }} seconds.<br /><br />After {{ e4 }} seconds, Vladimir deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to all infected targets. If Hemoplague damages an enemy Champion, Vladimir heals himself for {{ f4 }} <span class="color99FF99">(+{{ f3 }})</span>, plus {{ e5 }}% for each Champion beyond the first.
+
+Xayah XayahQ Undeclared vars: ['f1', 'f2']
+Xayah throws two knives dealing {{ f1 }} <span class="colorFF9900">(+{{ f2 }})</span> physical damage and leaving two <span class="colorC200E1">Feathers</span>. Targets hit after the first take {{ e2 }}% damage.
+
+Xayah XayahE Undeclared vars: ['f3', 'f4']
+Xayah calls all <span class="colorC200E1">Feathers</span> back to her, dealing {{ e1 }} <span class="colorFF9900">(+{{ f3 }})</span> <span class="colorFF5802">(+{{ f4 }})</span> physical damage to enemies they pass through (Increased by <span class="colorFF5802">Critical Strike Chance</span>).<br /><br />Hitting an enemy with {{ e5 }} <span class="colorC200E1">Feathers</span> roots them for {{ e4 }} second.<br /><br/>Minions take {{ e2 }}% damage from Bladecaller.
+
+Xerath XerathArcaneBarrage2 Undeclared vars: ['f1', 'f2']
+Xerath calls down a blast of arcane energy, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to all enemies within the target area, slowing them by {{ e8 }}% for {{ e4 }} seconds. Enemies in the center of the blast take {{ f1 }} <span class="color99FF99">(+{{ f2 }})</span> magic damage and are slowed by {{ e3 }}%. This slow decays rapidly.
+
+XinZhao XinZhaoQ Undeclared vars: ['f1']
+Xin Zhao's next 3 basic attacks deal {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> extra physical damage and reduce his other cooldowns by 1 second. The final strike also knocks the target into the air for {{ e2 }} seconds.
+
+XinZhao XinZhaoW Undeclared vars: ['f5']
+Xin Zhao slashes in front of himself with his spear, then thrusts it forward.<br /><br /><span class="colorDDDD77">Slash</span>: {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> damage.<br /><span class="colorDDDD77">Thrust</span>: {{ e2 }} <span class="colorFF8C00">(+{{ a2}})</span> damage and slows by {{ e6 }}% for {{ e7 }} seconds.<br /><br />Cast time is reduced with Attack Speed provided from items and levels (minimum of 0.4 seconds). Current cast time: <span class="colorFFFFFF">{{ f5 }}</fontcolor><br /><br /><rules>Deals 50% less damage to minions.<br />Lifesteal is 33% effective on both attacks.<br />Extends the current duration of Xin Zhao's other abilities by {{ f5 }} seconds.</rules>
+
+Yasuo YasuoDashWrapper Undeclared vars: ['f3']
+Dashes through target enemy, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorFF8C00">(+{{ f3 }})</span> Magic Damage. Each cast increases your next dash's base Damage by 25%, up to {{ e6 }}%.<br /><br />Cannot be re-cast on the same enemy for {{ e2 }} seconds.<br /><br /><span class="color99FF99">If cast while dashing, Steel Tempest will strike as a circle.</span>
+
+Yorick YorickQ Undeclared vars: ['f1']
+Yorick's next basic attack deals {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage and restores {{ f1 }} Health (doubled when below half Health). Last Rites will leave a grave if it kills the target.<br /><br />When there are three or more graves nearby and Last Rites has been used, Yorick can cast Awakening to raise Mist Walkers from graves.</span>
+
+Yorick YorickR Undeclared vars: ['f1', 'f2']
+Yorick summons The Maiden of the Mist and {{ e1 }} Mist Walkers. The Maiden has {{ e3 }} <span class="colorFF3300">(+{{ f1 }})</span> Health, deals {{ e4 }} <span class="colorFF8C00">(+{{ f2 }})</span> magic damage, and raises Mist Walkers from nearby enemy deaths.<br /><br />When Yorick damages the Maiden's target he will deal {{ e5 }}% of their max Health as bonus magic damage ({{ e7 }} second cooldown).<br /><br /><span class="colorDDDD77">If the Maiden is summoned inside a lane, she will start pushing the lane.</span>
+
+Zac ZacQ Undeclared vars: ['f2']
+Zac's arm stretches and grabs the first enemy it hits, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorCC3300">(+{{ f2 }})</span> magic damage and briefly slowing them. Zac's next basic attack is replaced with a long range smack that repeats the initial magic damage and slow effect.<br /><br />If Zac grabs a different enemy with each attack he'll throw them towards each other, dealing{{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorCC3300">(+{{ f2 }})</span> magic damage in an area if they collide.</span>
+
+Zac ZacE Undeclared vars: ['f2', 'f3']
+<span class="colorFF9900">First cast:</span> Zac faces the cursor and charges up over {{ e4 }} seconds.<br /><br /><span class="colorFF9900">Second cast:</span> Launches Zac towards a location, knocking up nearby enemies for {{ f2 }} to {{ f3 }} seconds (based on charge time) and dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage. Zac spawns extra chunks of <span class="color3ca126">Goo</span> for each enemy champion hit.<br /><br /><span class="size16 color8C8C8C">Can be cancelled by moving, refunding half of the ability's cooldown and cost.</span>
+
+Zac ZacR Undeclared vars: ['f1']
+<span class="colorFF9900">First cast: </span>Zac squishes himself down, making him immune to Crowd Control for up to {{ e5 }} seconds. Enemies standing on top of him are slowed by {{ e4 }}%.<br /><br /><span class="colorFF9900">Second cast: </span>Charging for at least {{ f1 }} seconds before recasting causes Zac to scoop up enemies on top of him, carrying them towards a location. Upon landing nearby enemies take {{e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and are briefly slowed.<br /><br />Reactivating before Zac charges up knocks back nearby enemies instead.</span></span>
+
+Zed ZedR Undeclared vars: ['f2']
+Zed becomes untargetable and dashes to an enemy champion, marking them. After 3 seconds, the mark triggers, dealing physical damage equal to <span class="colorFF8C00">{{ a1 }}</span> + {{ e2 }}% of all damage dealt to the target by Zed while the mark was active.<br /><br />The dash leaves a shadow behind for {{ e4 }} seconds. Reactivating Death Mark causes Zed to switch positions with this shadow.<br /><br /><span class="colorFFFFFF">Reaper of Shadows: </span>Zed reaps the shadow of the strongest foe slain under Death Mark, gaining <span class="colorFF8C00">{{ f2 }}</span> attack damage. ({{ e0 }} + {{ e9 }}% of the victim's attack damage.)
+
+Zoe ZoeQ Undeclared vars: ['f1', 'f2']
+Fire a missile that deals increasing damage the further it travels -- <span class="colorFFFFFF">{{ f1 }}</span> <span class="color99FF99">(+{{ a1 }})</span> to <span class="colorFFFFFF">{{ f2 }}</span> <span class="color99FF99">(+{{ a2 }})</span> magic damage. Enemies near the first target hit take {{ e4 }}% damage.<span class="size5"><br /><br /><br /></span>Recast to redirect the missile to a new position near Zoe.<br /><br /><rules>Paddle Star! deals damage based on a combination of Paddle Star's rank and Zoe's level. </rules>
+
+Zyra ZyraQ Undeclared vars: ['f1', 'f2']
+Thick vines spread through the ground and explode into spines, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to enemies within the area. <br /><br /><span class="colorDDDD77">Garden of Thorns: </span>If Deadly Spines is cast near a seed, a Thorn Spitter grows, dealing {{ f1 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage. A Thorn Spitter has 575 range and lasts {{ f2 }} seconds.
+
+Zyra ZyraE Undeclared vars: ['f1', 'f2']
+Sends forward vines dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and rooting enemies for {{ e5 }} second(s).<br /><br /><span class="colorDDDD77">Garden of Thorns: </span>If Grasping Roots passes near a seed, a Vine Lasher grows dealing {{ f1 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage and slowing enemies by {{ e2 }}% for {{ e3 }} seconds. A Vine Lasher has 400 range and lasts {{ f2 }} seconds.

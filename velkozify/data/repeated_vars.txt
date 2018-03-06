@@ -1,0 +1,128 @@
+Ahri AhriOrbofDeception
+Deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage on the way out, and {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> true damage on the way back.<br /><br />Ahri gains movement speed that decays while her orb is traveling.
+{'link': 'spelldamage', 'coeff': 0.35, 'key': 'a1'} is repeated 2 times.
+
+Akali AkaliShadowDance
+Akali quickly strikes through her target, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.<br /><br />Akali stores an Essence of Shadow on kills and assists as well as every <span class="colorFFFFFF">{{ f1 }}</span> seconds up to {{ e4 }} total.
+{'link': '@cooldownchampion', 'coeff': [22.5, 15], 'key': 'f2'} is repeated 2 times.
+
+Anivia FlashFrost
+A massive chunk of ice flies toward target location, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage. <br /><br />At the end of its range or if Anivia activates the spell again, the missile detonates, doing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage in a small area and stunning units for {{ e4 }} seconds.<br /><br />Enemies damaged by Flash Frost are also slowed by {{ f1 }}% for {{ e5 }} seconds.
+{'link': 'spelldamage', 'coeff': 0.4, 'key': 'a1'} is repeated 2 times.
+
+Chogath Feast
+Ravenously feed on an enemy, dealing {{ e2 }} <scaleHealth>(+{{ f2 }})</scaleHealth> <scaleAP>(+{{ a2 }})</scaleAP> true damage to champions or {{ e1 }} <scaleHealth>(+{{ f2 }}) </scaleHealth><scaleAP>(+{{ a2 }})</scaleAP> to minions and monsters. If the target is killed, Cho'Gath gains a stack of Feast, which causes him to grow in size and gain {{ e3 }} maximum health.<br /><br /><rules>Only {{ e4 }} total stacks can be gained from minions and non-epic monsters. <span class="colorFFF673">(Current: {{ f3 }}/{{ e4 }})</span></rules>
+{'link': 'spelldamage', 'coeff': 0.5, 'key': 'a2'} is repeated 2 times.
+
+Corki PhosphorusBomb
+Corki lobs a bomb, dealing {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage to enemies in the target area. In addition, the blast reveals the area and champions hit by the blast for {{ e2 }} seconds (does not reveal stealth).
+{'link': 'spelldamage', 'coeff': 0.5, 'key': 'a1'} is repeated 2 times.
+
+Diana DianaOrbs
+Creates three orbiting spheres that explode on contact with enemies dealing {{ e2 }} <scaleAP>(+{{ a1 }})</scaleAP> magic damage. Lasts {{ e1 }} seconds.<br /><br />Grants a temporary shield that absorbs {{ e3 }} <scaleAP>(+{{ a2 }})</scaleAP> damage. If the third sphere detonates, the shield increases by {{ e3 }} <scaleAP>(+{{ a2 }})</scaleAP>.
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a2'} is repeated 2 times.
+
+Evelynn EvelynnQ
+Evelynn's Lasher strikes in the target direction, dealing {{ e5 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage to the first unit hit and causing Evelynn's next 3 spells or attacks on that unit deal {{ e4 }}<span class="color99FF99"> (+{{ a1 }})</span> bonus magic damage. Then, Evelynn can recast this ability up to 3 times.<br /><br /><span class="colorFF9900">Recast:</span> Fires spikes through the nearest enemy, dealing {{ e5 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage to all units hit.<br /><br /><rules><span class="color8c8c8c">Refunds {{ e1 }}% of Hate Spike's cooldown if the Lasher hits a monster. Hate Spike prioritizes the target Evelynn is attacking.</span></rules>
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a2'} is repeated 2 times.
+
+Fizz FizzW
+<span class="colorFF9900">Passive: </span>Fizz's basic attacks bleed his enemies, dealing {{ e1 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage over {{ e8 }} seconds. <br /><br /><span class="colorFF9900">Active: </span>Fizz's next basic attack deals {{ e3 }} <span class="color99FF99">(+{{ a2 }})</span> bonus magic damage. If the target has been bleeding for at least {{ e7 }} seconds, this bonus increases to {{ e3 }} <span class="color99FF99">(+{{ a1 }})</span>. <br /><br /><span class="size16 color8C8C8C">If the Active kills a target it refunds {{ e2 }} mana and resets its cooldown to {{ e0 }} second.</span>
+{'link': 'spelldamage', 'coeff': 1.2, 'key': 'a1'} is repeated 2 times.
+
+Karma KarmaQ
+Fires a blast of energy that explodes upon enemy contact, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and slowing Movement Speed by {{ e2 }}% for {{ e3 }} seconds. <br /><br /><span class="colorFF9900">Mantra Bonus - Soulflare:</span> Deals {{ f1 }} <span class="color99FF99">(+{{ a2 }})</span> additional magic damage and leaves a circle of flame that slows enemies by {{ f3 }}%. After 1.5 seconds the circle erupts, dealing {{ f2 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to enemies in the area.
+{'link': 'spelldamage', 'coeff': 0.6, 'key': 'a1'} is repeated 2 times.
+
+Karma KarmaSpiritBind
+Links Karma to an enemy champion or monster, granting <span class="coloree91d7">True Sight</span> and dealing {{ effect1amount*0.5 }} <spanclass="color99FF99">(+{{ f4 }}) </span>magic damage. If the link is unbroken for {{ e3 }} seconds, the target is rooted for {{ e2 }} second(s) and takes an additional {{ effect1amount*0.5 }} <span class="color99FF99">(+{{ f4 }}) </span>magic damage.<br /><br /><span class="colorFF9900">Mantra Bonus - Renewal:</span> Karma is healed for {{ f1 }}% <span class="color99FF99">(+{{ f3 }}%)</span> of her missing health. Ifthe link is not broken or the target dies, the root duration is increased by {{ f2 }} second(s) and Karma is healed for {{ f1 }}% <span class="color99FF99">(+{{ f3 }}%)</span> of her missing health.
+{'link': '@text', 'coeff': [75, 150, 225, 300], 'key': 'f1'} is repeated 2 times.
+
+Kayle JudicatorRighteousFury
+<span class="colorFF9900">Passive: </span>Kayle's Basic Attacks deal an additional {{ e4 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage on hit.<br /><br /><span class="colorFF9900">Active: </span>Kayle increases her Attack Range by 400 for 10 seconds and the passive bonus is increased to {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and apply spell effects on hit.<br /><br />In addition, deals {{ e1 }} <span class="colorFF8C00">(+{{ f2 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage and applies spell effects on attack to enemies near her target.
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a1'} is repeated 2 times.
+
+Leblanc LeblancE
+Launches a chain that shackles the first unit hit to LeBlanc, granting <span class="coloree91d7">True Sight</span> of the unit and dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.<br /><br />If the target remains shackled for {{ e2 }} seconds they are rooted for {{ e2 }} seconds and take an additional {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.
+{'link': 'spelldamage', 'coeff': 0.5, 'key': 'a1'} is repeated 2 times.
+
+LeeSin BlindMonkQOne
+<spellActive>Sonic Wave: </spellActive>Lee Sin projects a discordant wave of sound to locate his enemies, dealing {{ e1 }} <scaleAD>(+{{ a1}})</scaleAD> physical damage to the first enemy it encounters, granting <keyword>True Sight</keyword> of the target. <specialRules>If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next {{ e7 }} seconds.</specialRules><br /><br /><spellActive>Resonating Strike: </spellActive>Lee Sin dashes to the enemy hit by Sonic Wave, dealing {{ e2 }} <scaleAD>(+{{ a1 }})</scaleAD> physical damage plus {{ e3 }}% of their missing Health (Max: {{ e6 }} Damage vs. Monsters).
+{'link': 'bonusattackdamage', 'coeff': 0.9, 'key': 'a1'} is repeated 2 times.
+
+LeeSin BlindMonkRKick
+Lee Sin performs a powerful roundhouse kick knocking an enemy champion back and dealing {{ e1 }} <scaleAD>(+{{ a1 }})</scaleAD> physical damage.<br /><br />Enemies the target collides with are knocked into the air briefly and take physical damage equal to {{ e1 }} <scaleAD>(+{{ a1 }})</scaleAD> plus {{ e3 }}% of the initial target's bonus health.</span>
+{'link': 'bonusattackdamage', 'coeff': 2, 'key': 'a1'} is repeated 2 times.
+
+Lux LuxPrismaticWave
+Throws Lux's wand in target direction protecting her and all allied Champions it touches from {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> damage for 3 seconds.<br /><br />Upon reaching its destination it returns to Lux, protecting her and other allied Champions it touches from another {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> damage for 3 seconds.<br /><br /><rules>Shielding an ally with the outgoing shield doubles the value of the returning shield.</rules>
+{'link': 'spelldamage', 'coeff': 0.2, 'key': 'a1'} is repeated 2 times.
+
+Mordekaiser MordekaiserSyphonOfDestruction
+Mordekaiser deals {{ e3 }} <span class="colorFF8C00">(+{{ a1 }})</span><span class="color99FF99"> (+{{ a1 }})</span> magic damage in a cone.<span class="size8"><br /><br /></span>For each Champion hit, he gains {{ e5 }}% maximum shield.
+{'link': 'spelldamage', 'coeff': 0.6, 'key': 'a1'} is repeated 2 times.
+
+Morgana SoulShackles
+Dark chains latch onto nearby enemy Champions dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and slowing them by {{ e4 }}% for {{ e3 }} seconds, granting <span class="coloree91d7">True Sight</span>. After {{ e3 }} seconds, they are dealt an additional{{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage and are stunned for {{ e2 }} seconds.<br /><br />Enemy Champions can break the chains by moving away from Morgana.
+{'link': 'spelldamage', 'coeff': 0.7, 'key': 'a1'} is repeated 2 times.
+
+Poppy PoppyE
+Poppy tackles an enemy, dealing {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> physical damage and carrying them forward. If Poppy carries the target into terrain, the enemy takes {{ e2 }} <span class="colorFF8C00">(+{{ a1 }})</span> additional physical damage and is stunned for {{ e3 }} seconds.
+{'link': 'bonusattackdamage', 'coeff': 0.5, 'key': 'a1'} is repeated 2 times.
+
+RekSai RekSaiQ
+<span class="colorFF8C00">Un-Burrowed:</span> Rek'Sai's next 3 basic attacks within 5 seconds deal {{ e1 }} <span class="colorFF8C00">(+{{ a1 }})</span> bonus Physical Damage to nearby enemies.<br /><br /><span class="colorFF8C00">Burrowed:</span> Rek'Sai launches a burst of void-charged earth that explodes on first enemy hit, dealing {{ e4 }} <span class="color99FF99">(+{{ a2 }})</span> <span class="colorFF8C00">(+{{ a1 }})</span> Physical Damage and revealing non-stealthed enemies for {{ e6 }} seconds.
+{'link': 'bonusattackdamage', 'coeff': 0.4, 'key': 'a1'} is repeated 2 times.
+
+Renekton RenektonSliceAndDice
+<span class="colorFF6633">Slice:</span> Renekton dashes, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage to enemies he passes through. Hitting an enemy grants the ability to use Dice for {{ e8 }} seconds.<br /><br /><span class="colorFF6633">Dice:</span> Renekton dashes, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage to enemies he passes through.<br /><br />He generates <span class="colorFF6633">{{ e4 }} Fury</span> for each non-champion hit and <span class="colorFF6633">{{ e5 }} Fury</span> for each champion hit, up to a maximum of <span class="colorFF6633">{{ e0 }} Fury</span>.<br /><br /><span class="colorFF6633">Dice - 50 FuryBonus:</span> Damage increased to {{ e3 }} <span class="colorFF8C00">(+{{ f2 }})</span>. Enemies hit have {{ e2 }}% reduced Armor for {{ e9}} seconds. No longer generates <span class="colorFF6633">Fury</span>.
+{'link': 'bonusattackdamage', 'coeff': 1.35, 'key': 'f2'} is repeated 2 times.
+
+Rengar RengarW
+Deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to nearby enemies and heals Rengar for {{ e2 }}% of the damage he took in the last {{ e3 }} seconds.<br /><br /><span class="colorEDDA74">Ferocity effect: </span><br />Deals <span class="colorFFFFFF">{{ f1 }}</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage and removes existing crowd control effects, in addition to its normal effect.<br /><br /><rules><span class="color8c8c8c">Damage healed from monster attacks is increased by {{ e5 }}%.</span></rules>
+{'link': 'spelldamage', 'coeff': 0.8, 'key': 'a1'} is repeated 2 times.
+
+Rengar RengarE
+Throw a bola, dealing {{ e1 }}<span class="colorF88017"> (+{{ a1 }})</span> physical damage and slowing the first enemy hit by {{ e2 }}% for {{ e3 }} seconds.<br /><br /><span class="colorEDDA74">Ferocity effect:</span><br />Deals <span class="colorFFFFFF">{{ f1 }}</span> <span class="colorF88017">(+{{ a1 }})</span> physical damage and roots the target for {{ e4 }} seconds.
+{'link': 'bonusattackdamage', 'coeff': 0.7, 'key': 'a1'} is repeated 2 times.
+
+Riven RivenTriCleave
+Riven strikes out in front of her in a short line. This ability may be re-cast {{ e4 }} additional times.<br /><br /><span class="colorDDDD77">1st and 2nd Use:</span> Slashes forward, dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage to all units she comes in contact with.<br /><span class="colorDDDD77">3rd Use:</span> Leaps forward and slams the ground dealing {{ e1 }} <span class="colorFF8C00">(+{{ f1 }})</span> physical damage and knocking nearby enemies up. This leap can cross unpathable terrain.<br /><br /><span class="colorDDDD77">Riven will target the unit your cursor is hovering over, or if no targets are present, Riven will simply strike the direction she is currently facing.</span>
+{'link': 'attackdamage', 'coeff': [0.4, 0.45, 0.5, 0.55, 0.6], 'key': 'f1'} is repeated 2 times.
+
+Sejuani SejuaniR
+Sejuani throws her True Ice bola that deals {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to the first enemy champion hit and stuns them for {{ e2 }} second.<br /><br />The bola becomes more powerful as it travels, dealing {{ e7 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage, stunning for {{ e6 }} seconds and creating a storm that slows other enemies by {{ e8 }}%. After {{ e3 }} seconds, the storm deals {{ e7 }} <span class="color99FF99">(+{{ a2 }})</span> magic damage and slows by {{ e4 }}% for {{ e5 }} seconds.
+{'link': 'spelldamage', 'coeff': 0.8, 'key': 'a2'} is repeated 2 times.
+
+Shyvana ShyvanaFireball
+Shyvana unleashes a fireball that stops after hitting a champion. All enemies hit take {{ e1 }} <span class="colorFF8C00">(+{{ f4 }})</span> <span class="color99FF99">(+{{ a1 }})</span> magic damage and are marked for {{ e2 }} seconds.<br /><br />Shyvana's basic attacks against marked targets deal {{ e4 }}% of their maximum health as magic damage on hit.<br /><br /><span class="colorFF3300">Dragon Form: </span>FlameBreath explodes on impact or at target location, dealing <span class="colorFFFFFF">{{ f1 }}</span> <span class="colorFF8C00">(+{{ f5 }})</span> <span class="color99FF99">(+{{ a1 }})</span> bonus magic damage and scorching the earth for 4 seconds. Enemies on scorched earth take <span class="colorFFFFFF">{{ f3 }}</span> <span class="colorFF8C00">(+{{ f6 }})</span> <span class="color99FF99">(+{{ f2 }})</span> magic damage per second.<br /><br /><span class="color919191"><i>Flame Breath's on-hit damage against monsters is capped at {{ e3 }} damage per hit.</i></span>
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a1'} is repeated 2 times.
+
+Sion SionW
+<span class="colorFFE076">Passive:</span> Sion gains {{ e5 }} maximum Health when he kills a unit ({{ e6 }} for champion kills, assists, large minions and large monsters). <span class="colorFF3300">Current Bonus: {{ f1 }} </span><br /><br /><span class="colorFFE076">Active:</span> Sion shields himself for {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorFF3300">(+{{ f2 }})</span> ({{ e3 }}% ofmaximum Health) for 6 seconds. After {{ e7 }} seconds, while the shield holds, Sion can reactivate to deal {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> plus {{ e4 }}% of the target's maximum Health as magic damage to nearby enemies. Max 400 bonus damage to minions and monsters.
+{'link': 'spelldamage', 'coeff': 0.4, 'key': 'a1'} is repeated 2 times.
+
+Skarner SkarnerVirulentSlash
+Skarner deals <span class="colorFF8C00">{{ f1 }}</span> physical damage to all nearby enemies. If a unit is struck, he charges himself withCrystal Energy for {{ e2 }} seconds.<br /><br />While Skarner is charged, Crystal Slash deals <span class="colorFF8C00">{{ f1 }}</span> <span class="color99FF99">(+{{ a1 }})</span> bonus magic damage.<br /><br />Basic attacks against non-structures lower Crystal Slash's cooldownby 0.25 seconds (quadrupled against champions).
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a1'} is repeated 2 times.
+
+Soraka SorakaE
+Creates a zone at target location for 1.5 seconds, dealing {{ e2 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage to enemy Champions in the cast radius. Enemy Champions standing in the zone are silenced until they leave. <br /><br />When the zone disappears, all enemy Champions still standing in the zone are rooted for {{ e1 }} second(s) and are dealt {{ e2 }} <span class="color99FF99">(+{{ a1 }}) </span>magic damage.
+{'link': 'spelldamage', 'coeff': 0.4, 'key': 'a1'} is repeated 2 times.
+
+TwistedFate PickACard
+Cast once to shuffle the deck and again to choose your card, enhancing your next attack.<br /><br /><span class="color4455FF">Blue Card</span> deals {{ e1 }} <scaleAD>(+{{ a2 }})</scaleAD> <scaleAP>(+{{ a1 }})</scaleAP> Magic Damage and restores {{ e6 }} Mana.<br /><br /><span class="colorFF2222">Red Card</span> deals {{ e4 }} <scaleAD>(+{{ a2 }})</scaleAD> <scaleAP>(+{{ a1 }})</scaleAP> Magic Damage to units aroundthe target and slows their Movement Speed by {{ e2 }}% for 2.5 seconds.<br /><br /><span class="colorFFD700">Gold Card</span> deals {{ e5 }}<scaleAD> (+{{ a2 }})</scaleAD> <scaleAP>(+{{ a1 }})</scaleAP> Magic Damage and stuns for {{ e3 }} seconds.
+{'link': 'spelldamage', 'coeff': 0.5, 'key': 'a1'} is repeated 3 times.
+{'link': 'spelldamage', 'coeff': 0.5, 'key': 'a1'} is repeated 3 times.
+
+Vi ViE
+Causes next basic attack to deal {{ e1 }} <span class="colorFF8C00">(+{{ f3 }})</span> <span class="color99FF99">(+{{ a1 }})</span> physical damage to the target and enemies behind it.<br /><br /></span>Vi charges a new punch every <span class="colorFFFFFF">{{ f1 }}</span> seconds and can hold 2 charges at once.
+{'link': '@text', 'coeff': [14, 12.5, 11, 9.5, 8], 'key': 'f1'} is repeated 2 times.
+
+Volibear VolibearR
+Volibear erupts with chain lightning, striking up to {{ e4 }} nearby enemies with {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> magic damage.<br /><br />For the next {{ e3 }} seconds, the storm empowers Volibear, causing his basic attacks to deal {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> bonus magic damage that chains to {{ e4 }} nearby enemies.
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a1'} is repeated 2 times.
+
+Zac ZacQ
+Zac's arm stretches and grabs the first enemy it hits, dealing {{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorCC3300">(+{{ f2 }})</span> magic damage and briefly slowing them. Zac's next basic attack is replaced with a long range smack that repeats the initial magic damage and slow effect.<br /><br />If Zac grabs a different enemy with each attack he'll throw them towards each other, dealing{{ e1 }} <span class="color99FF99">(+{{ a1 }})</span> <span class="colorCC3300">(+{{ f2 }})</span> magic damage in an area if they collide.</span>
+{'link': 'spelldamage', 'coeff': 0.3, 'key': 'a1'} is repeated 2 times.

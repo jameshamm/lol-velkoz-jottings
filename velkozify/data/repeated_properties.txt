@@ -1,0 +1,246 @@
+Aatrox AatroxW
+e6 == cooldownBurn; 0.5
+
+Aatrox AatroxR
+e1 == rangeBurn; 550
+
+Alistar AlistarE
+e4 == rangeBurn; 350
+
+Ashe AsheSpiritOfTheHawk
+e3 == rangeBurn; 25000
+e4 == cooldownBurn; 5
+
+AurelionSol AurelionSolQ
+e2 == cooldownBurn; 10
+
+AurelionSol AurelionSolE
+e3 == rangeBurn; 3000/4000/5000/6000/7000
+
+Azir AzirQWrapper
+e4 == costBurn; 70
+
+Azir AzirEWrapper
+e7 == rangeBurn; 1100
+
+Bard BardQ
+e3 == costBurn; 60
+
+Caitlyn CaitlynAceintheHole
+e2 == rangeBurn; 2000/2500/3000
+
+Camille CamilleE
+e7 == rangeBurn; 800
+
+Chogath Rupture
+e2 == costBurn; 60
+
+Corki GGun
+e7 == costBurn; 50
+e8 == costBurn; 50
+
+Corki MissileBarrage
+e4 == cooldownBurn; 2
+
+Diana DianaArc
+e3 == costBurn; 55
+
+Diana DianaOrbs
+e3 == costBurn; 40/55/70/85/100
+
+DrMundo BurningAgony
+e4 == rangeBurn; 325
+
+DrMundo Sadism
+e4 == rangeBurn; 20
+
+Elise EliseHumanE
+e1 == cooldownBurn; 14/13/12/11/10
+
+Fiora FioraW
+e4 == costBurn; 50
+
+Fiora FioraR
+e5 == rangeBurn; 500
+
+Fizz FizzR
+e7 == rangeBurn; 1300
+
+Galio GalioR
+e8 == rangeBurn; 4000/4750/5500
+
+Gnar GnarE
+e6 == rangeBurn; 475
+
+Heimerdinger HeimerdingerQ
+e10 == costBurn; 20
+
+Ivern IvernW
+e1 == costBurn; 30
+
+Ivern IvernR
+e6 == cooldownBurn; 160/140/120
+
+Jhin JhinE
+e5 == cooldownBurn; 2
+
+Kaisa KaisaR
+e2 == rangeBurn; 1500/2000/2500
+
+Karthus KarthusDefile
+e3 == cooldownBurn; 0.5
+
+Katarina KatarinaEWrapper
+e3 == cooldownBurn; 14/12.5/11/9.5/8
+
+Kayn KaynR
+e10 == rangeBurn; 550
+
+Kled KledQ
+e6 == cooldownBurn; 9/8.5/8/7.5/7
+
+Kled KledR
+e10 == rangeBurn; 3500/4000/4500
+
+KogMaw KogMawLivingArtillery
+e2 == rangeBurn; 1200/1500/1800
+e3 == costBurn; 40
+
+Leblanc LeblancQ
+e4 == cooldownBurn; 6
+
+Leblanc LeblancW
+e4 == rangeBurn; 600
+
+LeeSin BlindMonkWOne
+e6 == costBurn; 50
+
+Leona LeonaSolarFlare
+e7 == costBurn; 100
+
+Lucian LucianW
+e3 == rangeBurn; 900
+
+Nidalee Bushwhack
+e4 == cooldownBurn; 13/12/11/10/9
+
+Nocturne NocturneParanoia
+e2 == rangeBurn; 2500/3250/4000
+
+Nunu Consume
+e5 == costBurn; 60
+
+Ornn OrnnR
+e1 == rangeBurn; 2500
+e4 == costBurn; 100
+
+Quinn QuinnW
+e4 == rangeBurn; 2100
+
+Quinn QuinnE
+e1 == costBurn; 50
+
+Quinn QuinnR
+e7 == costBurn; 100/50/0
+
+Rakan RakanE
+e5 == costBurn; 60/70/80/90/100
+
+Rakan RakanR
+e8 == cooldownBurn; 120/100/80
+
+Rammus DefensiveBallCurl
+e3 == cooldownBurn; 6
+
+RekSai RekSaiE
+e3 == cooldownBurn; 12
+
+Renekton RenektonReignOfTheTyrant
+e6 == rangeBurn; 20
+
+Rengar RengarR
+e9 == rangeBurn; 2500/3000/3500
+
+Rumble RumbleShield
+e3 == rangeBurn; 20
+
+Ryze RyzeR
+e7 == rangeBurn; 1750/3000
+
+Shaco Deceive
+e5 == rangeBurn; 400
+
+Shen ShenE
+e6 == costBurn; 150
+
+Shyvana ShyvanaImmolationAura
+e6 == rangeBurn; 325
+
+Sivir SivirQ
+e5 == costBurn; 70/80/90/100/110
+
+Sivir SivirR
+e6 == rangeBurn; 1000
+
+Syndra SyndraW
+e3 == cooldownBurn; 12/11/10/9/8
+
+TahmKench TahmKenchNewR
+e1 == rangeBurn; 4500/5500/6500
+
+Taliyah TaliyahR
+e2 == rangeBurn; 3000/4500/6000
+
+Teemo TeemoRCast
+e3 == costBurn; 75
+e8 == rangeBurn; 400/650/900
+
+Tristana TristanaW
+e3 == costBurn; 60
+
+TwistedFate Destiny
+e2 == cooldownBurn; 180/150/120
+e3 == costBurn; 150/125/100
+e4 == rangeBurn; 5500
+
+Udyr UdyrPhoenixStance
+e6 == rangeBurn; 325
+
+Varus VarusW
+e3 == cooldownBurn; 6
+
+Vayne VayneInquisition
+e3 == rangeBurn; 1
+
+Vi ViE
+e6 == cooldownBurn; 1
+
+Vi ViR
+e6 == rangeBurn; 800
+
+Xayah XayahQ
+e2 == costBurn; 50
+
+Xayah XayahW
+e6 == rangeBurn; 1000
+
+Xerath XerathLocusOfPower2
+e5 == rangeBurn; 3200/4400/5600
+
+XinZhao XinZhaoE
+e2 == costBurn; 50
+
+Zac ZacQ
+e3 == rangeBurn; 800
+
+Zac ZacR
+e7 == rangeBurn; 300
+
+Zed ZedE
+e7 == rangeBurn; 290
+
+Ziggs ZiggsQ
+e2 == rangeBurn; 850
+
+Zilean ZileanW
+e3 == costBurn; 35

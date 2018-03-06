@@ -12,13 +12,14 @@ def run_intra_champion_tests(champion_name):
 
     spell_errors = test_champion_spells(champion_name, champion_data)
     if spell_errors:
-        print("{} has spell {} issues".format(champion_name, len(spell_errors)))
+        print("{} has spell {} issues".format(
+            champion_name, len(spell_errors)))
         print("\n".join((" " * 4) + error for error in spell_errors))
 
 
 def test_champion_spells(champion_name, champion_data):
     """Test that the spells a champion has have consistent data.
-    
+
     Return a list of errors that were encountered."""
     spells_data = champion_data["data"][champion_name]["spells"]
     errors = list()
@@ -43,10 +44,38 @@ def test_champion_spells(champion_name, champion_data):
                     values, string_values))
 
             if len(values) != spell["maxrank"]:
-                message = "Spell {}: {} does not match {}. "
+                message = "Spell {}: {} does not match maxrank. "
                 message += "len({}) != {}"
                 errors.append(message.format(
-                    spell["name"], attribute, "maxrank",
-                    values, spell["maxrank"]))
+                    spell["name"], attribute, values, spell["maxrank"]))
+
+        # Check the effects all join together correctly.
+        effects, string_effects = spell["effect"], spell["effectBurn"]
+        if len(effects) != len(string_effects):
+            message = "Spell {}: effect does not match effectBurn. "
+            message += "len({}) != len({})"
+            errors.append(message.format(
+                spell["name"], effects, string_effects))
+
+        for effect, string_effect in zip(effects, string_effects):
+            # Skip any null entries.
+            if effect is None and string_effect is None:
+                continue
+
+            if len(effect) != spell["maxrank"]:
+                message = "Spell {}: effect does not match maxrank. "
+                message += "len({}) != {}"
+                errors.append(message.format(
+                    spell["name"], effect, spell["maxrank"]))
+
+            if len(effect) == 0:
+                message = "Spell {}: contains empty effect"
+                errors.append(message.format(spell["name"]))
+            elif not all(e == effect[0] for e in effect) and "/".join(
+                 map(str, effect)) != string_effect:
+                message = "Spell {}: effect does not match effectBurn. "
+                message += "{} is inconsistent with {}"
+                errors.append(message.format(
+                    spell["name"], effects, string_effects))
 
     return errors
