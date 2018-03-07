@@ -1,0 +1,44 @@
+# No variables in tooltip
+for champ, data in champs_data.items():
+    count = 0
+    for spell in data["spells"]:
+        if "{{" not in spell["tooltip"]:
+            if count == 0:
+                print(champ)
+            print(spell["id"])
+            print(spell["tooltip"])
+            count += 1
+    if count > 0:
+        print()
+
+Blitzcrank
+PowerFist
+Blitzcrank charges up his fist to make his next attack deal double his total attack damage as physical damage and pop his target up in the air.
+
+Draven
+DravenFury
+
+
+Kalista
+KalistaRx
+Draw Kalista's <i>Oathsworn</i> to her. For up to 4 seconds, the Oathsworn is untargetable and pacified.<br /><br />The Oathsworn may mouseclick to fly toward target position, stopping at the first enemy champion hit and knocking all enemies in a small radius back.<br /><br />Kalista's Oathsworn must be within 1100 units for her to cast this ability.
+
+Karma
+KarmaMantra
+Karma empowers her next ability within 8 seconds for an additional effect. <br /><br /><span class="colorFF9900">Soulflare: </span>Deals bonus damage and leaves behind a circle of flame, slowing enemies and dealing additional damage. <br /><br /><span class="colorFF9900">Renewal: </span>Karma heals for a portion of her missing health. If the link is unbroken the root is longer and Karma is healed again.<br /><br /><span class="colorFF9900">Defiance: </span>The shield is stronger and allied champions around the target also gain a shield and movement speed.
+
+Nidalee
+AspectOfTheCougar
+<span class="size18 colorFF9900">Human: </span>Nidalee transforms into a vicious cougar with the basic abilities Takedown, Pounce, and Swipe.<br /><br /><span class="size18 colorFF9900">Cougar: </span>Nidalee transforms back into human form. While in human form, triggering a <span class="colorFFF673">Hunt</span> resets the cooldown of Aspect of the Cougar.
+
+TahmKench
+TahmKenchNewR
+Begin to channel for up to 6 seconds. During this time, one ally champion can right click Tahm Kench to join in. Alternatively, reactivate this ability to travel alone. On reactivation or once an ally has opted in, Tahm travels to the target location. Incoming champion damage breaks the channel.<br /><br /><span class="colorcccccc"><i>'Boy, the world's one river, and I'm its king. Ain't no place I ain't been; ain't no place I can't go again.'</i></span>
+
+Yasuo
+YasuoWMovingWall
+Creates a moving wall that blocks all enemy projectiles for 4 seconds.
+
+Zoe
+ZoeR
+Blink to a nearby position for 1 second. Then blink back.<br /><br /><rules>Zoe may cast and attack, but not move, during this time. She can also see over walls.</rules>
