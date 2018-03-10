@@ -1,6 +1,7 @@
 """downloader.py contains all the necessary functions and classes to download
 data sets from a riot endpoint."""
 import json
+import sys
 
 from time import sleep
 from urllib import request
@@ -23,6 +24,14 @@ def download(url, data_format=None):
     if data_format is not None:
         # Coerce the data
         if data_format == "json":
+            # json.loads works on bytes for python>=3.6
+            # and just strings for previous versions.
+            # This check is to support previous python versions
+            # and probably needs a work around instead.
+            version_info = sys.version_info
+            if version_info.major == 3 and version_info.minor <= 5:
+                # Convert the bytes to a string
+                data = data.decode()
             data = json.loads(data)
         else:
             message = "Data format ({}) is not known".format(data_format)

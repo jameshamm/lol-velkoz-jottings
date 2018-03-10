@@ -21,7 +21,7 @@ from ..data import DataManager, compress_name
     metavar='<Champion name>', help="A specific champion to run tests on.")
 def test(champions, all_champions, all_items):
     """Run tests on various data sets."""
-    click.echo("Tests are still being made.")
+    click.echo("These tests are still under development.")
 
     # Make sure either some champions or all champions are selected.
     # Both is not allowed.
@@ -35,9 +35,11 @@ def test(champions, all_champions, all_items):
     if champions or all_champions:
         known_champions = manager.all_champion_names()
 
+        click.echo("Running tests on {} champions.".format(
+            "all" if all_champions else "some"))
+        click.echo("=" * 20)
+
         if all_champions:
-            click.echo("Running tests on all champions.")
-            click.echo("=" * 12)
             champions = known_champions.values()
 
         if champions:
@@ -58,7 +60,10 @@ def test(champions, all_champions, all_items):
 
             # Finally run tests
             for champion in sorted(champions):
+                click.echo("Running tests on {}".format(champion))
                 run_intra_champion_tests(champion)
 
     if all_items:
         click.echo("The data set with all items is not supported yet.")
+
+    click.echo("Finished running all tests.")
