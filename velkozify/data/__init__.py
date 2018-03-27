@@ -39,7 +39,7 @@ class DataManager:
                 self.patch = patch
             else:
                 raise ValueError(f"Patch '{patch}' is not known or available.")
-        
+
         self.region = "en_US" if region is None else region
         # print(f"Using patch '{self.patch}'' and region '{self.region}'")
 

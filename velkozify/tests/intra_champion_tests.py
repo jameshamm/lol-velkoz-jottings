@@ -1,9 +1,8 @@
 """intra_champion_tests.py contains tests that check the internal consistency
 of a champion's data.
+
+All test will be named in the format test_*
 """
-from ..data import DataManager
-
-
 def run_intra_champion_tests(manager, champion_name):
     """Run the tests for the supplied champion."""
     champion_data = manager.get_data(champion_name)

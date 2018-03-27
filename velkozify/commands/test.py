@@ -4,7 +4,7 @@ The data sets with tests current are
     Items
 """
 from ..tests import run_intra_champion_tests
-from ..data import DataManager, compress_name
+from ..data import compress_name
 
 
 def test_champions(manager, champions=None):
@@ -17,10 +17,10 @@ def test_champions(manager, champions=None):
         champions = known_champions.values()
     else:
         # Validate the champion names passed in.
-        # TODO: Move this validation step to the type arg 
+        # TODO: Move this validation step to the type argument.
         compressed_champions_names = [
             compress_name(champion) for champion in champions]
-    
+
         unknown_champions = [
             champion
             for champion in compressed_champions_names
@@ -55,6 +55,7 @@ def test_items(manager, items=None):
 
 
 def test_runner(manager, args):
+    """Run either the champion tests or the items tests."""
     if args.all_champions or args.champions:
         test_champions(manager, args.champions)
     elif args.all_items or args.items:
@@ -62,7 +63,7 @@ def test_runner(manager, args):
     else:
         # Something went wrong
         raise ValueError("Something unexpected happened")
-    
+
 
 def setup_test_parser(parser):
     """Add the arguments to the parser for the 'test' command."""
