@@ -3,7 +3,6 @@ lol-velkoz-jottings
 
 *A command line tool to inspect and analyse public lol datasets.*
 
-
 Purpose
 -------
 
@@ -13,3 +12,16 @@ Usage
 -----
 
 Coming soon (hopefully).
+
+Future Features?
+-------------------------
+
+--patch to specify the patch.
+
+Tests
+  Run tests on item sets
+  Run tests on runes (reforged).
+
+Info
+  Find the last time some data in a data set was changed.
+  Calculate expected champion stats.
