@@ -5,9 +5,8 @@ Example usage to print out all the champion names in the current patch
 >>> champion_names = d.all_champion_names()
 >>> print(champion_names.values())
 """
-import click
 
-from .downloader import expected_url, download, get_latest_patch
+from .downloader import expected_url, download, get_latest_patch, get_version_data
 from .storage import expected_filename, load, save
 
 from urllib.error import URLError
@@ -31,8 +30,18 @@ class DataManager:
             DataManager(patch="8.5.1")
             DataManager(patch="6.24.1", region="en_GB")
         """
-        self.patch = get_latest_patch() if patch is None else patch
+        if patch is None:
+            self.patch = get_latest_patch()
+        else:
+            # Verify the patch supplied is known.
+            known_patches = get_version_data()
+            if patch in known_patches:
+                self.patch = patch
+            else:
+                raise ValueError(f"Patch '{patch}' is not known or available.")
+        
         self.region = "en_US" if region is None else region
+        # print(f"Using patch '{self.patch}'' and region '{self.region}'")
 
     def _get_saved_data(self, query_type, query):
         """Return data if it is saved locally.
@@ -130,8 +139,7 @@ class DataManager:
             except IOError:
                 pass
             else:
-                click.echo(
-                    "Saved the data set for {} to {}".format(query, filename))
+                print(f"Saved the data set for {query} to {filename}")
 
             return data
 

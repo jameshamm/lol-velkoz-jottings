@@ -4,10 +4,6 @@ Examples of useful information include:
     What is the latest patch?
     How many champions exist in patch 8.4?
 """
-import click
-
-
-@click.command()
-def info():
-    """Show information about various data sets."""
-    click.echo("Info is still under development")
+def setup_info_parser(parser):
+    """Add the arguments to the parser for the 'test' command."""
+    parser.set_defaults(command=lambda args: print(f"Saw these args {args}"))

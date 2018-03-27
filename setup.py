@@ -43,10 +43,10 @@ setup(
         'Natural Language :: English',
         'Operating System :: OS Independent',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5'],
+        'Programming Language :: Python :: 3.6'],
     keywords='cli',
     packages=find_packages(exclude=['docs', 'tests*']),
-    install_requires=['Click'],
+    install_requires=[],
     extras_require={
         'test': ['coverage', 'pytest', 'pytest-cov']
     },

@@ -1,2 +1,7 @@
 # Install in development mode
 pip install -e .
+
+# Install the requirements via conda or pip
+pip install -r requirements.txt
+
+conda install --file=requirements.txt

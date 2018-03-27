@@ -7,6 +7,9 @@ from time import sleep
 from urllib import request
 
 
+VERBOSE = False  # Messy method to find out what online requests are being made.
+
+
 def download(url, data_format=None):
     """Download whatever is at the supplied url.
 
@@ -36,7 +39,8 @@ def download(url, data_format=None):
         else:
             message = "Data format ({}) is not known".format(data_format)
             raise ValueError(message)
-
+    if VERBOSE:
+        print(f"REQUEST: {url}")
     sleep(0.5)  # Simulate rate limiting by sleeping for half a second.
     return data
 

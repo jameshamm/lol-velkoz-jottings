@@ -4,9 +4,8 @@ of a champion's data.
 from ..data import DataManager
 
 
-def run_intra_champion_tests(champion_name):
+def run_intra_champion_tests(manager, champion_name):
     """Run the tests for the supplied champion."""
-    manager = DataManager()
     champion_data = manager.get_data(champion_name)
 
     spell_errors = test_champion_spells(champion_name, champion_data)

@@ -3,67 +3,80 @@
 The data sets with tests current are
     Items
 """
-import click
-
 from ..tests import run_intra_champion_tests
 from ..data import DataManager, compress_name
 
 
-@click.command()
-@click.option(
-    '--all-items', is_flag=True, help="Run the tests on all items.")
-@click.option(
-    '--all-champions', is_flag=True,
-    help="Run the tests on all (known) champions. This does not work in "
-    "conjunction with the option for specific champions.")
-@click.option(
-    '-c', '--champion', '--champions', multiple=True,
-    metavar='<Champion name>', help="A specific champion to run tests on.")
-def test(champions, all_champions, all_items):
-    """Run tests on various data sets."""
-    click.echo("These tests are still under development.")
+def test_champions(manager, champions=None):
+    """Run test for the passed champions.
+    Data will be sourced from the Data Manager."""
+    print("Testing champs is still in development!")
+    known_champions = manager.all_champion_names()
 
-    # Make sure either some champions or all champions are selected.
-    # Both is not allowed.
-    if champions and all_champions:
-        raise click.BadOptionUsage(
-            "The options for both individual champions and "
-            "all champions were set. Please only use one of those options")
+    if champions is None:
+        champions = known_champions.values()
+    else:
+        # Validate the champion names passed in.
+        # TODO: Move this validation step to the type arg 
+        compressed_champions_names = [
+            compress_name(champion) for champion in champions]
+    
+        unknown_champions = [
+            champion
+            for champion in compressed_champions_names
+            if champion not in known_champions]
 
-    manager = DataManager()
+        if unknown_champions:
+            message = "Some champion are not known: {}.".format(
+                unknown_champions)
+            raise ValueError(message)
 
-    if champions or all_champions:
-        known_champions = manager.all_champion_names()
+        # Make sure each name is in the right format to look it up.
+        # E.g. kog'maw -> KogMaw, cho'gath -> Chogath
+        champions = [
+            known_champions[name] for name in compressed_champions_names]
 
-        click.echo("Running tests on {} champions.".format(
-            "all" if all_champions else "some"))
-        click.echo("=" * 20)
+    # Run the tests.
+    for i, champion in enumerate(sorted(champions), 1):
+        if manager.patch == "8.6.1" and champion == "Cassiopeia":
+            print(f"Skipping {champion} ({i}/{len(champions)})")
+            continue
+        print(f"Running tests on {champion} ({i}/{len(champions)})")
+        run_intra_champion_tests(manager, champion)
 
-        if all_champions:
-            champions = known_champions.values()
+    print("Done testing champions.")
 
-        if champions:
-            # Validate the champion names passed in.
-            unknown_champions = [
-                champion for champion in champions
-                if compress_name(champion) not in known_champions]
 
-            if unknown_champions:
-                message = "Some champion are not known: {}.".format(
-                    unknown_champions)
-                raise ValueError(message)
+def test_items(manager, items=None):
+    """Run test for items.
+    Data will be sourced from the supplied Data Manager."""
+    print("Testing items is still in development!")
+    print("Done with items.")
 
-            # Make sure each name is in the right format to look it up.
-            # E.g. kog'maw -> KogMaw, cho'gath -> Chogath
-            champions = [
-                known_champions[compress_name(name)] for name in champions]
 
-            # Finally run tests
-            for champion in sorted(champions):
-                click.echo("Running tests on {}".format(champion))
-                run_intra_champion_tests(champion)
+def test_runner(manager, args):
+    if args.all_champions or args.champions:
+        test_champions(manager, args.champions)
+    elif args.all_items or args.items:
+        test_items(manager, args.items)
+    else:
+        # Something went wrong
+        raise ValueError("Something unexpected happened")
+    
 
-    if all_items:
-        click.echo("The data set with all items is not supported yet.")
+def setup_test_parser(parser):
+    """Add the arguments to the parser for the 'test' command."""
+    test_args = parser.add_mutually_exclusive_group(required=True)
+    # Test champions.
+    test_args.add_argument(
+        '--champions', metavar="<champion name>", nargs='+', type=str)
+    test_args.add_argument(
+        '--all-champions', action="store_true", help="Run the tests on all (known) champions")
 
-    click.echo("Finished running all tests.")
+    # Or test items.
+    test_args.add_argument(
+        '--items', metavar="<item name>", nargs='+', type=str)
+    test_args.add_argument(
+        '--all-items', action="store_true", help="Run the tests on all items.")
+
+    parser.set_defaults(run_tests=test_runner)
