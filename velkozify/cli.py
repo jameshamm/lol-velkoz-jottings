@@ -3,7 +3,7 @@ import argparse
 
 from .commands.test import setup_test_parser
 from .commands.info import setup_info_parser
-from .data import DataManager, get_latest_patch
+from .data import get_latest_patch
 
 
 def main():
@@ -27,10 +27,8 @@ def main():
     args = parser.parse_args()
 
     if args.patch.lower() == "latest":
-        patch = get_latest_patch()
+        args.patch = get_latest_patch()
 
-    manager = DataManager(patch)
-
-    args.run_tests(manager, args)
+    args.run(args)
 
     print("Done")

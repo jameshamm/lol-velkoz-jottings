@@ -7,7 +7,8 @@ from time import sleep
 from urllib import request
 
 
-VERBOSE = False  # Messy method to find out what online requests are being made.
+LATEST_PATCH = None
+VERBOSE = True  # Messy method to find out what online requests are being made.
 
 
 def download(url, data_format=None):
@@ -54,9 +55,12 @@ def get_version_data():
 
 def get_latest_patch():
     """Return the most recent patch."""
-    version_data = get_version_data()
-    # latest patch is the first in the version data list
-    return version_data[0]
+    global LATEST_PATCH
+    if LATEST_PATCH is None:
+        version_data = get_version_data()
+        # latest patch is the first in the version data list
+        LATEST_PATCH = version_data[0]
+    return LATEST_PATCH
 
 
 # Fill this in with the patch, then the region

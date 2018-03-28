@@ -4,7 +4,7 @@ The data sets with tests current are
     Items
 """
 from ..tests import run_intra_champion_tests
-from ..data import compress_name
+from ..data import DataManager, compress_name
 
 
 def test_champions(manager, champions=None):
@@ -54,15 +54,17 @@ def test_items(manager, items=None):
     print("Done with items.")
 
 
-def test_runner(manager, args):
+def test_runner(args):
     """Run either the champion tests or the items tests."""
+    manager = DataManager(args.patch)
+
     if args.all_champions or args.champions:
         test_champions(manager, args.champions)
     elif args.all_items or args.items:
         test_items(manager, args.items)
     else:
         # Something went wrong
-        raise ValueError("Something unexpected happened")
+        raise ValueError(f"Something unexpected happened with {args}")
 
 
 def setup_test_parser(parser):
