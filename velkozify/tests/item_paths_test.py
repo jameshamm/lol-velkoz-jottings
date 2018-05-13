@@ -47,4 +47,14 @@ def test_paths_link(item_id, all_items):
                     message = "{} requires {}, but {} doesn't upgrade to {}"
                     errors.append(message.format(component_id, item_id, item_id, component_id))
 
+    # Check items only rely on available components.
+    if 'from' in item_data:
+        components = item_data['from']
+        for component_id in components:
+            component = all_items_data[component_id]
+            for map_id, item_is_available in item_data['maps'].items():
+                if item_is_available and not component['maps'][map_id]:
+                    message = "{} requires {}, but that item is not available on {}"
+                    errors.append(message.format(item_id, component_id, map_id))
+
     return errors

@@ -59,7 +59,7 @@ def test_items(manager, items=None):
             print("Running tests on {} ({} / {})".format(
                 item_id, i, len(item_ids)
             ))
-            # run_item_paths_tests(manager, item_id)
+            run_item_paths_tests(manager, item_id)
             run_intra_item_tests(manager, item_id)
     else:
         print("Specific item tests are not ready.")
