@@ -3,6 +3,8 @@ of a champion's data.
 
 All test will be named in the format test_*
 """
+
+
 def run_champion_itemsets_tests(manager, champion_name):
     """Run the tests for the supplied champion."""
     champion_data = manager.get_data(champion_name)
@@ -17,7 +19,7 @@ def run_champion_itemsets_tests(manager, champion_name):
 
 def test_champion_itemsets(champion_name, champion_data, all_items):
     """Test the item sets recommended for a champion are consistent.
-    
+
     Return a list of errors that were encountered."""
     itemset_data = champion_data["data"][champion_name]["recommended"]
     all_items_data = all_items['data']

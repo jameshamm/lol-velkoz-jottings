@@ -3,6 +3,8 @@ of a champion's data.
 
 All test will be named in the format test_*
 """
+
+
 def run_intra_champion_tests(manager, champion_name):
     """Run the tests for the supplied champion."""
     champion_data = manager.get_data(champion_name)
@@ -65,7 +67,7 @@ def test_champion_spells(champion_name, champion_data):
                 errors.append(message.format(
                     spell["name"], effect, spell["maxrank"]))
 
-            if len(effect) == 0:
+            if not effect:
                 message = "Spell {}: contains empty effect"
                 errors.append(message.format(spell["name"]))
             elif not all(e == effect[0] for e in effect) and "/".join(

@@ -29,10 +29,9 @@ def compare_data(new_data, old_data, name=""):
             print(old_data)
             print()
             return False
-        
+
         # print(new_data, old_data)
-        # import pdb; pdb.set_trace()
-        return any(compare_data(new, old, name) for new, old in zip(new_data, old_data))            
+        return any(compare_data(new, old, name) for new, old in zip(new_data, old_data))
 
     for key, old_value in old_data.items():
         if key == "version":
@@ -44,7 +43,7 @@ def compare_data(new_data, old_data, name=""):
             print()
             are_different = True
             continue
-        
+
         new_value = new_data[key]
         if isinstance(old_value, (dict, list, tuple)):
             if type(new_value) != type(old_value):
@@ -80,7 +79,7 @@ def get_diff(args):
     new_patch, old_patch = args.new_patch, args.old_patch
     if new_patch.lower() == "latest":
         new_patch = get_latest_patch()
-    
+
     if old_patch.lower() == "latest":
         old_patch = get_latest_patch()
 
@@ -91,7 +90,7 @@ def get_diff(args):
     old_data = DataManager(old_patch).get_data(champion)
 
     compare_data(new_data, old_data)
-    
+
     import pdb; pdb.set_trace()
 
 

@@ -7,7 +7,6 @@ from .commands.info import setup_info_parser
 from .data import get_latest_patch
 
 
-
 def main():
     """The main entrypoint for the cli."""
     parser = argparse.ArgumentParser()
