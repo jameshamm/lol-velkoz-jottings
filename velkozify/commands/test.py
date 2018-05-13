@@ -4,7 +4,7 @@ The data sets with tests current are
     Champions
     Items
 """
-from ..tests import run_intra_champion_tests, run_champion_itemsets_tests, run_item_paths_tests
+from ..tests import run_intra_champion_tests, run_champion_itemsets_tests, run_item_paths_tests, run_intra_item_tests
 from ..data import DataManager, compress_name
 
 
@@ -53,7 +53,14 @@ def test_items(manager, items=None):
     if items is None:
         # Testing all items
         print("Running tests on all items.")
-        run_item_paths_tests(manager)
+        item_ids = manager.get_data(all_items=True)['data'].keys()
+
+        for i, item_id in enumerate(sorted(item_ids), 1):
+            print("Running tests on {} ({} / {})".format(
+                item_id, i, len(item_ids)
+            ))
+            # run_item_paths_tests(manager, item_id)
+            run_intra_item_tests(manager, item_id)
     else:
         print("Specific item tests are not ready.")
     print("Done with items.")
