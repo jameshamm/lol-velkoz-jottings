@@ -1,9 +1,13 @@
 """"""
+import velkozify.log as log
+
+
 def run_item_paths_tests(manager, item_id):
     """"""
     all_items = manager.get_data(all_items=True)
     item_path_errors = test_paths_link(item_id, all_items)
     if item_path_errors:
+        import pdb; pdb.set_trace()
         print("Upgrading {} has {} issue(s)".format(
             item_id, len(item_path_errors)))
         print("\n".join((" " * 4) + error for error in item_path_errors))
