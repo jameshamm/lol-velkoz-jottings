@@ -111,8 +111,8 @@ class DataManager:
 
         # Only one data set should be requested at once
         if number_of_requested_data_sets != 1:
-            message = "More than one data set was requested at once."
-            raise ValueError(message)
+            message = "Expected one data set to be requested, got {}"
+            raise ValueError(message.format(number_of_requested_data_sets))
 
         if not force_download:
             # Look locally for the data

@@ -1,9 +1,10 @@
 """Command to test various different data sets.
 
 The data sets with tests current are
+    Champions
     Items
 """
-from ..tests import run_intra_champion_tests
+from ..tests import run_intra_champion_tests, run_champion_itemsets_tests, run_item_paths_tests
 from ..data import DataManager, compress_name
 
 
@@ -38,11 +39,9 @@ def test_champions(manager, champions=None):
 
     # Run the tests.
     for i, champion in enumerate(sorted(champions), 1):
-        if manager.patch == "8.6.1" and champion == "Cassiopeia":
-            print(f"Skipping {champion} ({i}/{len(champions)})")
-            continue
         print(f"Running tests on {champion} ({i}/{len(champions)})")
         run_intra_champion_tests(manager, champion)
+        run_champion_itemsets_tests(manager, champion)
 
     print("Done testing champions.")
 
@@ -51,6 +50,12 @@ def test_items(manager, items=None):
     """Run test for items.
     Data will be sourced from the supplied Data Manager."""
     print("Testing items is still in development!")
+    if items is None:
+        # Testing all items
+        print("Running tests on all items.")
+        run_item_paths_tests(manager)
+    else:
+        print("Specific item tests are not ready.")
     print("Done with items.")
 
 
@@ -82,4 +87,4 @@ def setup_test_parser(parser):
     test_args.add_argument(
         '--all-items', action="store_true", help="Run the tests on all items.")
 
-    parser.set_defaults(run_tests=test_runner)
+    parser.set_defaults(run=test_runner)
