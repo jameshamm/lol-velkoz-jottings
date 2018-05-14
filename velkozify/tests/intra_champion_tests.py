@@ -3,6 +3,7 @@ of a champion's data.
 
 All test will be named in the format test_*
 """
+from ..logger import log
 
 
 def run_intra_champion_tests(manager, champion_name):
@@ -11,9 +12,8 @@ def run_intra_champion_tests(manager, champion_name):
 
     spell_errors = test_champion_spells(champion_name, champion_data)
     if spell_errors:
-        print("{} has spell {} issues".format(
-            champion_name, len(spell_errors)))
-        print("\n".join((" " * 4) + error for error in spell_errors))
+        message = "Error inside {}".format(champion_name)
+        log.test_result(message, spell_errors)
 
 
 def test_champion_spells(champion_name, champion_data):
@@ -49,16 +49,16 @@ def test_champion_spells(champion_name, champion_data):
                     spell["name"], attribute, values, spell["maxrank"]))
 
         # Check the effects all join together correctly.
-        effects, string_effects = spell["effect"], spell["effectBurn"]
-        if len(effects) != len(string_effects):
+        effects, effects_strings = spell["effect"], spell["effectBurn"]
+        if len(effects) != len(effects_strings):
             message = "Spell {}: effect does not match effectBurn. "
             message += "len({}) != len({})"
             errors.append(message.format(
-                spell["name"], effects, string_effects))
+                spell["name"], effects, effects_strings))
 
-        for effect, string_effect in zip(effects, string_effects):
+        for effect, effect_string in zip(effects, effects_strings):
             # Skip any null entries.
-            if effect is None and string_effect is None:
+            if effect is None and effect_string is None:
                 continue
 
             if len(effect) != spell["maxrank"]:
@@ -70,11 +70,18 @@ def test_champion_spells(champion_name, champion_data):
             if not effect:
                 message = "Spell {}: contains empty effect"
                 errors.append(message.format(spell["name"]))
-            elif not all(e == effect[0] for e in effect) and "/".join(
-                 map(str, effect)) != string_effect:
+            elif not list_and_str_match(effect, effect_string):
                 message = "Spell {}: effect does not match effectBurn. "
                 message += "{} is inconsistent with {}"
                 errors.append(message.format(
-                    spell["name"], effects, string_effects))
+                    spell["name"], effects, effects_strings))
 
     return errors
+
+
+def list_and_str_match(effect, effect_string):
+    """TODO: Move other items to this function"""
+    if not all(e == effect[0] for e in effect):
+        return False
+
+    return "/".join(map(str, effect)) != effect_string

@@ -1,10 +1,10 @@
 """The main entrypoint for commands."""
 import argparse
-import velkozify.log as log
 
 from .commands.test import setup_test_parser
 from .commands.info import setup_info_parser
 from .data import get_latest_patch
+from .logger import log
 
 
 def main():

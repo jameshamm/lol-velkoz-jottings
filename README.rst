@@ -16,7 +16,8 @@ Coming soon (hopefully).
 Future Features?
 -------------------------
 
---patch to specify the patch.
+Make adding tests completely separate and as lax as possible
+Add types?
 
 Tests
   Run tests on item sets

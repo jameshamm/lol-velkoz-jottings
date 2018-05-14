@@ -1,12 +1,12 @@
-"""This module is for making access to data sets as easy as possible.
+"""This module (data) is for making access to data sets as easy as possible.
 
 Example usage to print out all the champion names in the current patch
 >>> d = DataManager()
 >>> champion_names = d.all_champion_names()
 >>> print(champion_names.values())
 """
-
 from .downloader import expected_url, download, get_latest_patch, get_version_data
+from ..logger import log
 from .storage import expected_filename, load, save
 
 from urllib.error import URLError
@@ -41,7 +41,7 @@ class DataManager:
                 raise ValueError(f"Patch '{patch}' is not known or available.")
 
         self.region = "en_US" if region is None else region
-        # print(f"Using patch '{self.patch}'' and region '{self.region}'")
+        log.info(f"Using patch '{self.patch}'' and region '{self.region}'")
 
     def _get_saved_data(self, query_type, query):
         """Return data if it is saved locally.
@@ -139,7 +139,7 @@ class DataManager:
             except IOError:
                 pass
             else:
-                print(f"Saved the data set for {query} to {filename}")
+                log.info(f"Saved the data set for {query} to {filename}")
 
             return data
 

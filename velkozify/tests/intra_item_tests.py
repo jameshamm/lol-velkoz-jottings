@@ -1,4 +1,5 @@
 """"""
+from ..logger import log
 
 
 def run_intra_item_tests(manager, item_id):
@@ -7,9 +8,8 @@ def run_intra_item_tests(manager, item_id):
 
     item_errors = test_item(item_id, all_items)
     if item_errors:
-        print("{} has spell {} issue(s)".format(
-            item_id, len(item_errors)))
-        print("\n".join((" " * 4) + error for error in item_errors))
+        message = "Error inside {}".format(item_id)
+        log.test_result(message, item_errors)
 
 
 def test_item(item_id, all_items):

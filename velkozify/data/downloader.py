@@ -3,6 +3,8 @@ data sets from a riot endpoint."""
 import json
 import sys
 
+from ..logger import log
+
 from time import sleep
 from urllib import request
 
@@ -40,8 +42,10 @@ def download(url, data_format=None):
         else:
             message = "Data format ({}) is not known".format(data_format)
             raise ValueError(message)
+
     if VERBOSE:
-        print(f"REQUEST: {url}")
+        log.log(url, name="REQUEST")
+
     sleep(0.5)  # Simulate rate limiting by sleeping for half a second.
     return data
 

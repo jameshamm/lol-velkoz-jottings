@@ -1,19 +1,20 @@
 """"""
-import velkozify.log as log
+from ..logger import log
 
 
 def run_item_paths_tests(manager, item_id):
-    """"""
+    """Run the path tests for the supplied item."""
     all_items = manager.get_data(all_items=True)
     item_path_errors = test_paths_link(item_id, all_items)
     if item_path_errors:
-        print("Upgrading {} has {} issue(s)".format(
-            item_id, len(item_path_errors)))
-        print("\n".join((" " * 4) + error for error in item_path_errors))
+        message = "Error upgrading {}".format(item_id)
+        log.test_result(message, item_path_errors)
 
 
 def test_paths_link(item_id, all_items):
-    """"""
+    """Test the paths (upgrades and components) for an item are consistent.
+
+    Return a list of errors that were encountered."""
     all_items_data = all_items['data']
     errors = list()
     item_data = all_items_data[item_id]

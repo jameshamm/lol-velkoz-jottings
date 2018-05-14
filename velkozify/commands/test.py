@@ -4,14 +4,16 @@ The data sets with tests current are
     Champions
     Items
 """
+
 from ..tests import run_intra_champion_tests, run_champion_itemsets_tests, run_item_paths_tests, run_intra_item_tests
 from ..data import DataManager, compress_name
+from ..logger import log
 
 
 def test_champions(manager, champions=None):
     """Run test for the passed champions.
     Data will be sourced from the Data Manager."""
-    print("Testing champs is still in development!")
+    log.info("Testing champs is still in development!")
     known_champions = manager.all_champion_names()
 
     if champions is None:
@@ -39,31 +41,29 @@ def test_champions(manager, champions=None):
 
     # Run the tests.
     for i, champion in enumerate(sorted(champions), 1):
-        print(f"Running tests on {champion} ({i}/{len(champions)})")
+        log.count(f"Running tests on {champion}", i, len(champions))
         run_intra_champion_tests(manager, champion)
         run_champion_itemsets_tests(manager, champion)
 
-    print("Done testing champions.")
+    log.info("Done testing champions.")
 
 
 def test_items(manager, items=None):
     """Run test for items.
     Data will be sourced from the supplied Data Manager."""
-    print("Testing items is still in development!")
+    log.info("Testing items is still in development!")
     if items is None:
         # Testing all items
-        print("Running tests on all items.")
+        log.info("Running tests on all items.")
         item_ids = manager.get_data(all_items=True)['data'].keys()
 
         for i, item_id in enumerate(sorted(item_ids), 1):
-            print("Running tests on {} ({} / {})".format(
-                item_id, i, len(item_ids)
-            ))
+            log.count(f"Running tests on {item_id}", i, len(item_ids))
             run_item_paths_tests(manager, item_id)
             run_intra_item_tests(manager, item_id)
     else:
-        print("Specific item tests are not ready.")
-    print("Done with items.")
+        log.info("Specific item tests are not ready.")
+    log.info("Done with items.")
 
 
 def test_runner(args):

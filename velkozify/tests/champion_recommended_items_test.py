@@ -3,6 +3,7 @@ of a champion's data.
 
 All test will be named in the format test_*
 """
+from ..logger import log
 
 
 def run_champion_itemsets_tests(manager, champion_name):
@@ -12,9 +13,8 @@ def run_champion_itemsets_tests(manager, champion_name):
 
     itemset_errors = test_champion_itemsets(champion_name, champion_data, all_items)
     if itemset_errors:
-        print("{} has spell {} issue(s)".format(
-            champion_name, len(itemset_errors)))
-        print("\n".join((" " * 4) + error for error in itemset_errors))
+        message = "Error with the itemset for {}".format(champion_name)
+        log.test_result(message, itemset_errors)
 
 
 def test_champion_itemsets(champion_name, champion_data, all_items):
@@ -55,5 +55,4 @@ def test_champion_itemsets(champion_name, champion_data, all_items):
 
     # TODO: Check the items are available on the mode they are recommended for.
 
-    # import pdb; pdb.set_trace()
     return errors

@@ -1,3 +1,5 @@
+"""storage.py provides a means to access and store data in a predictable
+manner, that mirrors the online storage of data sets."""
 import json
 import os
 
@@ -49,7 +51,6 @@ def save(filename, contents, data_format=None):
 
 def expected_filename(query_type, query, patch, region):
     """Return the expected filename for a data set."""
-
     file_location_prefix = os.path.join(LOCAL_STORAGE_FOLDER, patch, region)
 
     if query_type == "champion":
