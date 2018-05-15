@@ -31,16 +31,15 @@ def test_champion_spells(champion_name, champion_data):
     attributes_to_test = ("cooldown", "cost", "range")
     for spell in spells_data:
         for attribute in attributes_to_test:
-            values, string_values = spell[attribute], spell[attribute + "Burn"]
-            # This is kinda hard to read. Move to a function?
-            if not all(v == values[0] for v in values) and \
-               "/".join(map(str, values)) != string_values:
+            values, values_string = spell[attribute], spell[attribute + "Burn"]
+
+            if not list_and_str_match(values, values_string):
                 message = "Spell {}: {} does not match {}. "
                 message += "{} is inconsistent with {}"
 
                 errors.append(message.format(
                     spell["name"], attribute, attribute + "Burn",
-                    values, string_values))
+                    values, values_string))
 
             if len(values) != spell["maxrank"]:
                 message = "Spell {}: {} does not match maxrank. "
@@ -74,14 +73,40 @@ def test_champion_spells(champion_name, champion_data):
                 message = "Spell {}: effect does not match effectBurn. "
                 message += "{} is inconsistent with {}"
                 errors.append(message.format(
-                    spell["name"], effects, effects_strings))
+                    spell["name"], effect, effect_string))
 
     return errors
 
 
-def list_and_str_match(effect, effect_string):
-    """TODO: Move other items to this function"""
-    if not all(e == effect[0] for e in effect):
-        return False
+def list_and_str_match(values, values_string):
+    """Return True if the list of values and the string of the values match
 
-    return "/".join(map(str, effect)) != effect_string
+    There are two cases
+    1) The values are all the same and the string is a single value
+    list_and_str_match([0, 0, 0], '0') -> True
+
+    2) The values are different and the string reflects that
+    list_and_str_match([50, 100, 150], '50/100/150') -> True
+
+    NOTE: An issue arises due to floating point error and
+    rounding to two places. There are 'inconsistencies' in the data set.
+    0.015 -> 0.01
+    0.002 -> 0.0
+    0.0286 -> 0.03
+    To solve this we rolled a custom _close function that is pretty imprecise.
+    """
+    if all(value == values[0] for value in values) and \
+       _close(values[0], float(values_string)):
+        return True
+
+    return "/".join(map(str, values)) == values_string
+
+
+def _close(one, two, abs_diff=0.0051):
+    """A worse math.isclose. This could probably be done with isclose instead.
+
+    The default is 0.0051 because 0.005 doesn't catch all the 'differences'.
+
+    >>> isclose(0.015, 0.01) -> False
+    >>> _close(0.015, 0.01) -> True"""
+    return abs(one - two) <= abs_diff
