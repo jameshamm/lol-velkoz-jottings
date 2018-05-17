@@ -5,6 +5,7 @@ Examples of useful information include:
     How many champions exist in patch 8.4?
 """
 from ..data import DataManager, get_latest_patch
+from ..logger import log
 
 
 def compare_data(new_data, old_data, name=""):
@@ -98,13 +99,19 @@ def get_info(args):
     print(args)
 
 
+def get_item_info(args):
+    all_items = DataManager(patch=args.patch).get_data(all_items=True)
+    item_data = all_items['data'][args.item_id]
+    log.data(item_data)
+
+
 def setup_info_parser(parser):
     """Add the arguments to the parser for the 'test' command."""
     subcommands = parser.add_subparsers(title="Information")
 
     diff_parser = subcommands.add_parser("diff")
     diff_parser.add_argument(
-        'champion', metavar="<champion name>", type=str
+        'champion', metavar="champion name", type=str
     )
     diff_parser.add_argument(
         'new_patch', nargs="?", default="latest"
@@ -112,7 +119,10 @@ def setup_info_parser(parser):
     diff_parser.add_argument(
         'old_patch', type=str
     )
-
     diff_parser.set_defaults(run=get_diff)
+
+    item_parser = subcommands.add_parser("item")
+    item_parser.add_argument('item_id', type=str)
+    item_parser.set_defaults(run=get_item_info)
 
     parser.set_defaults(run=get_info)

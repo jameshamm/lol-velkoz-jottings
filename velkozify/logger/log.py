@@ -1,7 +1,12 @@
 """log.py controls how messages are printed.
 
 It is essentially a custom logger, so beware. :P
-No effort has been made to make this threadsafe."""
+No effort has been made to make this threadsafe.
+
+Example usage:
+>>> from logger import log
+>>> log.info('This is some text')
+"""
 ANSI_COLOUR_CODES = {
     "red": "\033[91m",
     "green": "\033[92m",
@@ -74,3 +79,20 @@ def test_result(message, errors, indent=4):
             log(indent_str + error)
     else:
         success(message)
+
+
+def data(data):
+    """Display the data supplied in a nice-ish format."""
+    if isinstance(data, dict):
+        # To keep it consistent between prints, sort the data.
+        for k, v in sorted(data.items()):
+            log(f"{k}: {v}")
+    else:
+        # Check if it is iterable.
+        try:
+            data_iterator = iter(data)
+        except TypeError:
+            log(data)
+        else:
+            for item in sorted(data_iterator):
+                log(item)
